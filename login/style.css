@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #111827;
+}
+header{
+    background-color: #1f2937;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    height: 70px;   
+}
+.logo h1{
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal; 
+    margin-left: 20px;
+    color: rgb(103, 103, 255);   
+}
+.titulo{
+    font-family: "Anton", sans-serif;
+    text-align: center;
+    margin-top: 200px;
+}
