@@ -6,6 +6,7 @@
 }
 body{
     background-color: #111827;
+    color: white;
 }
 header{
     background-color: #1f2937;
@@ -51,3 +52,76 @@ a:hover{
 faz a porra do negocio que se ficar pequeno o nome vira hamburgue*/
 
 /*header do site principal*/
+
+
+.conteudo{
+    margin-left: 40px;
+    margin-top: 40px;
+}
+.posts{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-left: 40px;
+    margin-top: 40px;
+}
+.postagem{
+    background-color: #1f2937;
+    width: 400px;
+    height: 350px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+.PostImg img{
+    width: 100%;
+    height: 60%; 
+    border-radius: 10px;
+    margin: 0;
+    display: block; 
+}
+.CorMemb{
+    background-color: blue;
+    height: 5px;
+    width: 100%;
+    margin-top: -112px;
+}
+.PostCont{
+    margin-top: 20px;
+    margin-left: 30px;
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";;
+}
+.PostCont h2{
+    font-weight: 400;
+    font-style: normal; 
+    color: white;
+    font-size: 20px;
+}
+.PostCont p{
+    font-weight: 400;
+    font-style: normal; 
+    color: white;
+    margin-top: 20px;
+}
+.ifoPost{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-right: 30px;
+}
+.bolinha{
+    background-color: blue;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-top: 5px;
+}
+.name{
+    font-size: 14px;
+}
+h6{
+    font-size: 12px;
+}
