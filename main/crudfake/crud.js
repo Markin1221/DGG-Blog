@@ -28,6 +28,8 @@ function register() {
 	index++
 }
 
+//peguei do youtube sei nem oq faz bglh confuso do carai depois eu entendo isso
+
 function remove(id) {
 	node = document.getElementById(id)
 	node.remove()
