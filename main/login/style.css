@@ -75,7 +75,7 @@ a {
 }
 
 /* Estilo para o botão com cor que combina com o fundo */
-.botao {
+button{
     width: 100%;
     padding: 12px;
     margin-top: 15px;
@@ -91,13 +91,13 @@ a {
 }
 
 /* Hover: mudança suave de cor */
-.botao:hover {
+button:hover {
     background-color: #818cf8;
     transform: scale(1.05); /* Dá um efeito de "zoom" no botão */
 }
 
 /* Clique: efeito de "pressionado" */
-.botao:active {
+button:active {
     background-color: #4b45db; /* Cor de fundo mais escura */
     transform: scale(0.98); /* Leve redução de tamanho */
 }
