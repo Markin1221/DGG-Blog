@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <title>Modern Login Page | AsmrProg</title>
 </head>
 
@@ -30,12 +36,19 @@
     <div class="login">
         <H2>Login</H2>
         <form action="/login" method="post">
+           <P>Nome do usuario</P>
             <input type="text" name="usuario" placeholder="Digite seu nome">
+           <p>Sua senha</p>
             <input type="password" name="usuario" placeholder="Digite a sua senha">
-            <input type="number" name="cpf" placeholder="Digite seu cpf(sem - ou .)">
+           <p>Seu CPF</p>
+            <input type="string" name="cpf" placeholder="Digite seu CPF">
+           <p>Digite seu Email</p>
             <input type="text" name="email" placeholder="Digite seu Gmail">
-            <input type="text" name="usuario" placeholder="Digite seu nome">
-            <button class="tudo feito">Logar</button>
+           <p>eu n faço ideia</p>
+            <input type="text" name="usuario" placeholder="falta fazer">
+            <button id="finalizadoLogin">Logar</button>
+           <h3>Caso não tenha uma conta clique abaixo</h3>
+            <button class="criarConta"> Criar Conta </button>
         </form>
     </div>
 

@@ -45,6 +45,10 @@ a {
     font-style: normal;
     transition: all 0.3s ease-in-out;
 }
+H2{
+    font-size: 50px;
+    margin: 50px;
+}
 .login {
     position: absolute;
     top: 50%;
@@ -52,9 +56,9 @@ a {
     transform: translate(-50%, -50%);
     background-color: #1f2937;
     padding: 30px;
-    border-radius: 12px;
+    border-radius: 20px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-    width: 320px;
+    width: 420px;
     text-align: center;
 }
 
@@ -74,7 +78,7 @@ a {
     color: #9ca3af;
 }
 
-/* Estilo para o botão com cor que combina com o fundo */
+/* botão do login */
 button{
     width: 100%;
     padding: 12px;
@@ -99,5 +103,42 @@ button:hover {
 /* Clique: efeito de "pressionado" */
 button:active {
     background-color: #4b45db; /* Cor de fundo mais escura */
+    transform: scale(0.98); /* Leve redução de tamanho */
+}
+.login p{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+}
+
+H3{
+   font-size: small;
+   margin-top: 15px;
+}
+
+/* botão de criar conta  */
+.criarConta{
+    width: 50%;
+    padding: 12px;
+    margin-top: 5px;
+    background-color: #6366f1; /* Roxo suave */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+}
+
+/* Hover: mudança suave de cor */
+.criarConta:hover {
+    background-color: #3a3c50;
+    transform: scale(1.05); /* Dá um efeito de "zoom" no botão */
+}
+
+/* Clique: efeito de "pressionado" */
+.criarConta:active {
+    background-color: #121218; /* Cor de fundo mais escura */
     transform: scale(0.98); /* Leve redução de tamanho */
 }
