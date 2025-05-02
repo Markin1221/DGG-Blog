@@ -49,11 +49,16 @@ H2{
     font-size: 50px;
     margin: 50px;
 }
+
+.main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: calc(100vh - 70px); /* altura da tela menos o header */
+      }
+      
 .login {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    align-items: center;
     background-color: #1f2937;
     padding: 30px;
     border-radius: 20px;
