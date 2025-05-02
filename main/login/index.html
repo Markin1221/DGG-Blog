@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    <title>Modern Login Page | AsmrProg</title>
+    <title>Modern Cadastro Page | AsmrProg</title>
 </head>
 
 <body>
@@ -21,7 +21,6 @@
         <div class="logo">
             <h1>DGG Blog</h1>
             <div class="borda"></div>
-            
         </div>
         <nav>
             <ul>
@@ -33,27 +32,26 @@
         </nav>
     </header>
 
-<div class="main">
-    <div class="login">
-        <H2>Login</H2>
-        <form action="/login" method="post">
-           <P>Nome do usuario</P>
-            <input type="text" name="usuario" placeholder="Digite seu nome">
-           <p>Sua senha</p>
-            <input type="password" name="usuario" placeholder="Digite a sua senha">
-           <p>Seu CPF</p>
-            <input type="string" name="cpf" placeholder="Digite seu CPF">
-           <p>Digite seu Email</p>
-            <input type="text" name="email" placeholder="Digite seu Gmail">
-           <p>eu n faço ideia</p>
-            <input type="text" name="usuario" placeholder="falta fazer">
-            <button id="finalizadoLogin">Logar</button>
-           <h3>Caso não tenha uma conta clique abaixo</h3>
-            <button class="criarConta"> Criar Conta </button>
-        </form>
+    <div class="main">
+        <div class="cadastro">
+            <H2>Cadastro</H2>
+            <form action="/cadastro" method="post">
+                <P>Nome do usuario</P>
+                <input type="text" name="usuario" placeholder="Digite seu nome">
+                <p>Sua senha</p>
+                <input type="password" name="senha" placeholder="Digite a sua senha">
+                <p>Seu CPF</p>
+                <input type="text" name="cpf" placeholder="Digite seu CPF">
+                <p>Digite seu Email</p>
+                <input type="text" name="email" placeholder="Digite seu Gmail">
+                <p>eu n faço ideia</p>
+                <input type="text" name="observacao" placeholder="falta fazer">
+                <button id="finalizadoCadastro">Cadastrar</button>
+                <h3>Caso já tenha uma conta clique abaixo</h3>
+                <button class="criarConta"> Entrar </button>
+            </form>
+        </div>
     </div>
-</div>
-
 
     <script src="script.js"></script>
 </body>
