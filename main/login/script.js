@@ -1,20 +1,28 @@
-document.getElementById('mudar-tema').addEventListener('click', function() {
-    event.preventDefault();
-   document.body.classList.toggle('light-mode');
-   document.querySelector('header').classList.toggle('light-mode');
-   document.querySelectorAll('.postagem').forEach(post => {
-        post.classList.toggle('light-mode');    
+document.addEventListener('DOMContentLoaded', () => {
+    const btnToLogin = document.querySelector('.entrarConta');
+    const btnToRegister = document.querySelector('.criarConta');
+    const loginForm = document.querySelector('.login');
+    const cadastroForm = document.querySelector('.cadastro');
+    const logarBtn = document.getElementById('finalizaloguin');
+
+    // Troca para o formulário de login
+    btnToLogin.addEventListener('click', (e) => {
+        e.preventDefault();
+        cadastroForm.classList.remove('active');
+        loginForm.classList.add('active');
     });
-    document.querySelectorAll('.PostCont').forEach(cont => {
-        cont.classList.toggle('light-mode');
+
+    // Troca para o formulário de cadastro
+    btnToRegister.addEventListener('click', (e) => {
+        e.preventDefault();
+        loginForm.classList.remove('active');
+        cadastroForm.classList.add('active');
     });
-    document.querySelectorAll('.a').forEach(link => {
-        link.classList.toggle('light-mode');
-    });
-    document.querySelectorAll('.h6').forEach(h6 => {
-        h6.classList.toggle('light-mode');
-    });
-    document.querySelectorAll('.bolinha').forEach(bolinha => {
-        bolinha.classList.toggle('light-mode');
+
+    // Redireciona para a página principal ao clicar em "logar"
+    logarBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        // Aqui você pode redirecionar para sua home
+        window.location.href = "pagina-principal.html"; // troque pelo nome real do seu arquivo
     });
 });
