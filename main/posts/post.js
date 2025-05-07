@@ -13,7 +13,7 @@ function SalvarPost() {
     let conteudo = document.getElementById("conteudo").value.trim();
 
     
-    let existe = posts.some(post => post.conteudo.trim().toLowerCase() === conteudo.toLowerCase());
+    let existe = posts.some(post => post.conteudo === conteudo);
     if (existe) {
         document.getElementById("mensagem").textContent = "Título já existe!";
         return;
@@ -31,4 +31,20 @@ function SalvarPost() {
     } else {
         document.getElementById("mensagem").textContent = "Por favor, preencha título e conteúdo.";
     }
+}
+function exibirPosts() {
+    let posts = JSON.parse(localStorage.getItem("posts")) || [];
+    let postContainer = document.getElementById("posts");
+    postContainer.innerHTML = ""; // Limpa o conteúdo atual
+
+    posts.forEach(post => {
+        let postElement = document.createElement("div");
+        postElement.className = "postagem";
+        postElement.innerHTML = `
+            <h2>${post.titulo}</h2>
+            <p>${post.conteudo}</p>
+            <p><small>${post.data}</small></p>
+        `;
+        postContainer.appendChild(postElement);
+    });
 }
