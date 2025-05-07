@@ -1,3 +1,5 @@
+/*modo-claro */
+
 document.getElementById('mudar-tema').addEventListener('click', function() {
     event.preventDefault();
    document.body.classList.toggle('light-mode');
