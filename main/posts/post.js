@@ -39,12 +39,31 @@ function exibirPosts() {
 
     posts.forEach(post => {
         let postElement = document.createElement("div");
-        postElement.className = "postagem";
+        postElement.className = "PostCont";
         postElement.innerHTML = `
             <h2>${post.titulo}</h2>
             <p>${post.conteudo}</p>
-            <p><small>${post.data}</small></p>
+            <div class="ifoPost">
+            <div class="bolinha"></div>
+            <h6 class="name">Maria Eduarda •</h6>
+            <h6 class="date">${post.data}</h6>
+            <h6 class="hour">18:45</h6>
+            <h6 class="coment"><i class="fa-solid fa-comment"></i>- 30</h6>
+            <h6 class="like"><i class="fa-solid fa-heart"></i>- 150</h6>
+            </div>
         `;
         postContainer.appendChild(postElement);
     });
 }
+
+
+function abrirPost() {
+    
+}
+
+function apagarPost() {
+    
+}
+
+
+/**mano,alguem tem que fazer essas funçoes ai ne */
