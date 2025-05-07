@@ -35,11 +35,10 @@ function exibirPosts(){
     let posts = JSON.parse(localStorage.getItem("posts")) || [];
     let postContainer = document.getElementById("posts");
     postContainer.innerHTML = ""; // Limpa o conteúdo atual
-
+    console.log(posts.value);
 
     posts.forEach(post => {
-        let postElement = document.createElement("div");
-        postElement.classList.add("post");
+        let post = document.getElementById("post").cloneNode(true);
         postElement.innerHTML = `
             <h2>${post.titulo}</h2>
             <p>${post.conteudo}</p>
