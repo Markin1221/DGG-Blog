@@ -62,6 +62,7 @@ body {
     background-color: #111827;
     color: white;
     font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+    
 }
 .cabesalho{
     text-align: center;
@@ -135,4 +136,57 @@ button:hover {
 button:active {
     background-color: #4b45db;
     transform: scale(0.98);
+}
+
+.FotoUsuario{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+.donoPost{
+    display: flex;
+}
+.nomeEArroba{
+    height: 50px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+.nomeUsuario{
+    font-size: 15px;
+}
+.arroba{
+    font-size: 12px;
+    color: gray;
+
+}
+#postGrande{
+    display: flex;
+    align-items: center;
+    height: 700px;
+    width: 60%;
+    background-color: #4b45db;
+    
+}
+.postCompleto{
+    height: 100%;
+    width: 100%;
+
+}
+.donoPost{
+    margin-top: 50px;
+}
+.conteudo{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    background-color: red;
+}
+.PostHeader{
+    margin-left: 40px;
+    display: flex;
+    font-size: 26px;
+}
+.PostHeader h2{
+    margin-left: 20px;
+    font-size: 22px;
 }

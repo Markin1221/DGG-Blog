@@ -47,3 +47,33 @@ function exibirPosts(){
         postContainer.appendChild(postElement);
     });
 }
+
+function abrirPost() {
+    let posts = JSON.parse(localStorage.getItem("posts"));
+    let qualPost = event.currentTarget;
+    let identificador = parseInt(qualPost.getAttribute("data-index"));
+
+    let PostAberto = document.getElementById("postGrande")
+    PostAberto.innerHTML =`
+     <div class="postCompleto">
+            <div class="PostHeader">
+                <div class="voltar" onclick="home()"><i class="fa-solid fa-arrow-left"></i></div>
+                <h2>${posts[identificador].titulo}</h2>
+            </div>
+            <div class="donoPost">
+                <img class="FotoUsuario" src="../imagens/usuario.jpg" alt="">
+                <div class="nomeEArroba">
+                    <h2 class="nomeUsuario">socram</h2>
+                    <h2 class="arroba">@MarkinLindo</h2>
+                </div>
+            </div>
+            <div class="conteudo">
+                <p>${posts[identificador].conteudo}</p>
+            </div>
+        </div>  
+    
+    `
+
+    
+
+}
