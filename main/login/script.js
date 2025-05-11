@@ -1,28 +1,22 @@
+
 document.addEventListener('DOMContentLoaded', () => {
     const btnToLogin = document.querySelector('.entrarConta');
     const btnToRegister = document.querySelector('.criarConta');
-    const loginForm = document.querySelector('.login');
-    const cadastroForm = document.querySelector('.cadastro');
+    const formSlider = document.getElementById('formSlider');
     const logarBtn = document.getElementById('finalizaloguin');
 
-    // Troca para o formulário de login
-    btnToLogin.addEventListener('click', (e) => {
-        e.preventDefault();
-        cadastroForm.classList.remove('active');
-        loginForm.classList.add('active');
-    });
-
-    // Troca para o formulário de cadastro
     btnToRegister.addEventListener('click', (e) => {
         e.preventDefault();
-        loginForm.classList.remove('active');
-        cadastroForm.classList.add('active');
+        formSlider.style.transform = "translateX(-100%)";
     });
 
-    // Redireciona para a página principal ao clicar em "logar"
+    btnToLogin.addEventListener('click', (e) => {
+        e.preventDefault();
+        formSlider.style.transform = "translateX(0)";
+    });
+
     logarBtn.addEventListener('click', (e) => {
         e.preventDefault();
-        // Aqui você pode redirecionar para sua home
-        window.location.href = "pagina-principal.html"; // troque pelo nome real do seu arquivo
+        window.location.href = "../index.html";
     });
 });

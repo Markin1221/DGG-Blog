@@ -31,36 +31,39 @@
         </nav>
     </header>
 
-    <div class="form-wrapper">
-        <div class="form-container login active">
-            <H2>Login</H2>
-            <form action="/login" method="post">
-                <P>Nome do usuario</P>
-                <input type="text" name="usuario" placeholder="Digite seu nome">
-                <p>Sua senha</p>
-                <input type="password" name="senha" placeholder="Digite a sua senha">
-                <button id="finalizaloguin">Logar</button> 
-                <H3>Ainda Não Tem Uma Conta?</H3>  
-                <button class="criarConta"> Cadastre-se </button>    
-        </div>
+<div class="form-wrapper">
+  <div class="form-slider" id="formSlider">
+    <div class="form-container login">
+      <h2>Login</h2>
+      <form action="/login" method="post">
+        <p>Nome do usuário</p>
+        <input type="text" name="usuario" placeholder="Digite seu nome">
+        <p>Sua senha</p>
+        <input type="password" name="senha" placeholder="Digite sua senha">
+        <button id="finalizaloguin">Logar</button>
+        <h3>Ainda Não Tem Uma Conta?</h3>
+        <button class="criarConta">Cadastre-se</button>
+      </form>
+    </div>
 
-        <div class="form-container cadastro">
-            <H2>Cadastro</H2>
-            <form action="/cadastro" method="post">
-                <P>Nome do usuario</P>
-                <input type="text" name="usuario" placeholder="Digite seu nome">
-                <p>Sua senha</p>
-                <input type="password" name="senha" placeholder="Digite a sua senha">
-                <p>Seu CPF</p>
-                <input type="text" name="cpf" placeholder="Digite seu CPF">
-                <p>Digite seu Email</p>
-                <input type="text" name="email" placeholder="Digite seu Gmail">
-                <p>eu n faço ideia</p>
-                <input type="text" name="observacao" placeholder="falta fazer">
-                <button class="entrarConta"> login </button>
-            </form>
-        </div>
-    </div>    
+    <div class="form-container cadastro">
+      <h2>Cadastro</h2>
+      <form action="/cadastro" method="post">
+        <p>Nome do usuário</p>
+        <input type="text" name="usuario" placeholder="Digite seu nome">
+        <p>Sua senha</p>
+        <input type="password" name="senha" placeholder="Digite sua senha">
+        <p>Seu CPF</p>
+        <input type="text" name="cpf" placeholder="Digite seu CPF">
+        <p>Digite seu Email</p>
+        <input type="text" name="email" placeholder="Digite seu Gmail">
+        <p>Data de nascimento</p>
+        <input type="date" name="dataNacimento">
+        <button class="entrarConta">Login</button>
+      </form>
+    </div>
+  </div>
+</div>    
 
     <script src="script.js"></script>
 </body>
