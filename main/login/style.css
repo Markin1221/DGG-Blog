@@ -5,14 +5,14 @@
 }
 
 body {
-    background-color: #111827;
+    background-color: #220d3d;
     color: white;
     font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
 }
 
 /* Header */
 header {
-    background-color: #1f2937;
+    background-color: #10081d;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -21,11 +21,11 @@ header {
 }
 
 .logo h1, a {
-    font-family: "Anton", sans-serif;
+    font-family: "American Typewriter, serif";
     font-weight: 400;
     font-style: normal;
     margin-left: 20px;
-    color: rgb(103, 103, 255);
+    color: rgb(150, 110, 64);
 }
 
 ul {
@@ -60,13 +60,13 @@ H2 {
     margin: 10px 0;
     border: none;
     border-radius: 8px;
-    background-color: #374151;
+    background-color: #441b5c;
     color: white;
     font-size: 14px;
 }
 
 .cadastro input::placeholder {
-    color: #9ca3af;
+    color: #853baf;
 }
 
 /* botão do cadastro */
@@ -74,7 +74,7 @@ button {
     width: 100%;
     padding: 12px;
     margin-top: 15px;
-    background-color: #6366f1; /* Roxo suave */
+    background-color: #6a2685; /* Roxo suave */
     color: white;
     border: none;
     border-radius: 8px;
@@ -87,13 +87,13 @@ button {
 
 /* Hover: mudança suave de cor */
 button:hover {
-    background-color: #818cf8;
+    background-color: #34165c;
     transform: scale(1.05); /* Dá um efeito de "zoom" no botão */
 }
 
 /* Clique: efeito de "pressionado" */
 button:active {
-    background-color: #4b45db; /* Cor de fundo mais escura */
+    background-color: #5a166e; /* Cor de fundo mais escura */
     transform: scale(0.98); /* Leve redução de tamanho */
 }
 
@@ -112,7 +112,7 @@ H3 {
     width: 50%;
     padding: 12px;
     margin-top: 5px;
-    background-color: #6366f1; /* Roxo suave */
+    background-color: #290636; /* Roxo suave */
     color: white;
     border: none;
     border-radius: 10px;
@@ -125,7 +125,7 @@ H3 {
 
 /* Hover: mudança suave de cor */
 .criarConta:hover {
-    background-color: #3a3c50;
+    background-color: #9011da;
     transform: scale(1.05); /* Dá um efeito de "zoom" no botão */
 }
 
@@ -136,7 +136,7 @@ H3 {
 }
 .login {
     align-items: center;
-    background-color: #1f2937;
+    background-color: #7a1c8d;
     padding: 30px;
     border-radius: 20px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
@@ -149,7 +149,7 @@ H3 {
     margin: 10px 0;
     border: none;
     border-radius: 8px;
-    background-color: #374151;
+    background-color: #434b58;
     color: white;
     font-size: 14px;
 }
@@ -169,7 +169,7 @@ H3 {
 .form-container {
     width: 100%;
     max-width: 420px;
-    background-color: #1f2937;
+    background-color: #1f022c;
     padding: 30px;
     border-radius: 30px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
