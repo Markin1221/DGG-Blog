@@ -5,14 +5,14 @@
 }
 
 body {
-    background-color: #220d3d;
+    background-color: #bc85a3;
     color: white;
     font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
 }
 
 /* Header */
 header {
-    background-color: #10081d;
+    background-color: #f9e1e0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -60,13 +60,13 @@ H2 {
     margin: 10px 0;
     border: none;
     border-radius: 8px;
-    background-color: #441b5c;
-    color: white;
+    background-color: #003780;
+    color: rgb(255, 255, 255);
     font-size: 14px;
 }
 
 .cadastro input::placeholder {
-    color: #853baf;
+    color: #ffffff;
 }
 
 /* botão do cadastro */
@@ -74,7 +74,7 @@ button {
     width: 100%;
     padding: 12px;
     margin-top: 15px;
-    background-color: #6a2685; /* Roxo suave */
+    background-color: #feadb9; /* Roxo suave */
     color: white;
     border: none;
     border-radius: 8px;
@@ -87,7 +87,7 @@ button {
 
 /* Hover: mudança suave de cor */
 button:hover {
-    background-color: #34165c;
+    background-color: #f9e1e0;
     transform: scale(1.05); /* Dá um efeito de "zoom" no botão */
 }
 
@@ -100,6 +100,7 @@ button:active {
  p {
     font-family: Arial, Helvetica, sans-serif;
     text-align: left;
+    color: #f9e1e0;
 }
 
 H3 {
@@ -112,7 +113,7 @@ H3 {
     width: 50%;
     padding: 12px;
     margin-top: 5px;
-    background-color: #290636; /* Roxo suave */
+    background-color: #feadb9; /* Roxo suave */
     color: white;
     border: none;
     border-radius: 10px;
@@ -125,7 +126,7 @@ H3 {
 
 /* Hover: mudança suave de cor */
 .criarConta:hover {
-    background-color: #9011da;
+    background-color: #f9e1e0;
     transform: scale(1.05); /* Dá um efeito de "zoom" no botão */
 }
 
@@ -136,7 +137,7 @@ H3 {
 }
 .login {
     align-items: center;
-    background-color: #7a1c8d;
+    background-color: #d400ff;
     padding: 30px;
     border-radius: 20px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
@@ -149,7 +150,7 @@ H3 {
     margin: 10px 0;
     border: none;
     border-radius: 8px;
-    background-color: #434b58;
+    background-color: #350025;
     color: white;
     font-size: 14px;
 }
@@ -168,6 +169,7 @@ H3 {
     align-items: center;
     margin-top: 40px ;
     border-radius: 40px;
+    background-color: #660245;
 }
 
 .form-slider {
@@ -182,7 +184,7 @@ H3 {
     height: 100%;
     padding: 30px;
     flex-shrink: 0;
-    background-color: #1f022c;
+    background-color: #660245;
     border-radius: 30px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     display: flex;
