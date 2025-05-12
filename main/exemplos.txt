@@ -1,0 +1,70 @@
+<div class="postagem" onclick="debug()">
+                    <div class="PostImg"><img src="./imagens/festa.avif" alt=""></div>
+                    <div class="CorMemb"></div>
+                    <div class="PostCont">
+                        <h3><a href="">festa surpresa???</a></h3>
+                        <p>mano do nada eu cheguei em casa e tinha varias sandalias na frente de casaKKKKKKKKKK</p>
+
+                        <div class="ifoPost">
+                            <div class="bolinha"></div>
+                            <h6 class="name">Arnaldo •</h6>
+                            <h6 class="date">12/10/2023</h6>
+                            <h6 class="hour">12:00</h6>
+                            <h6 class="coment"><i class="fa-solid fa-comment"></i>- 0</h6>
+                            <h6 class="like"><i class="fa-solid fa-heart"></i>- 15</h6>
+
+                        </div>
+                    </div>
+                </div>
+              
+                
+                <div class="postagem" onclick="debug()">
+                  <div class="PostImg"><img src="./imagens/reuniao.avif" alt="Bolo de Cenoura Delicioso"></div>
+                  <div class="CorMemb"></div>
+                  <div class="PostCont">
+                    <h3><a href="#">Bolo de Cenoura Irresistível</a></h3>
+                    <p>Receita simples e deliciosa de bolo de cenoura, perfeito para o lanche da tarde! Aprenda o passo a passo e surpreenda a todos com essa receita incrível.</p>
+                    <div class="ifoPost">
+                      <div class="bolinha"></div>
+                      <h6 class="name">Ana Maria •</h6>
+                      <h6 class="date">13/10/2023</h6>
+                      <h6 class="hour">15:30</h6>
+                      <h6 class="coment"><i class="fa-solid fa-comment"></i>- 25</h6>
+                      <h6 class="like"><i class="fa-solid fa-heart"></i>- 120</h6>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="postagem" onclick="debug()">
+                  <div class="PostImg"><img src="./imagens/reuniao.avif" alt="Quarto Organizado"></div>
+                  <div class="CorMemb"></div>
+                  <div class="PostCont">
+                    <h3><a href="#">Organizando seu quarto em 5 passos</a></h3>
+                    <p>Dicas práticas e eficazes para organizar seu quarto de forma simples e rápida. Transforme seu espaço em um ambiente aconchegante e funcional!</p>
+                    <div class="ifoPost">
+                      <div class="bolinha"></div>
+                      <h6 class="name">João Silva •</h6>
+                      <h6 class="date">14/10/2023</h6>
+                      <h6 class="hour">10:00</h6>
+                      <h6 class="coment"><i class="fa-solid fa-comment"></i>- 15</h6>
+                      <h6 class="like"><i class="fa-solid fa-heart"></i>- 85</h6>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="postagem" onclick="debug()">
+                  <div class="PostImg"><img src="./imagens/reuniao.avif" alt="Gato Brincando com Plantas"></div>
+                  <div class="CorMemb"></div>
+                  <div class="PostCont">
+                    <h3><a href="#">A saga do meu gato destruidor de plantas!</a></h3>
+                    <p>Histórias engraçadas e fotos hilárias do meu gato causando o maior estrago entre minhas plantinhas! Prepare-se para muitas risadas!</p>
+                    <div class="ifoPost">
+                      <div class="bolinha"></div>
+                      <h6 class="name">Maria Eduarda •</h6>
+                      <h6 class="date">15/10/2023</h6>
+                      <h6 class="hour">18:45</h6>
+                      <h6 class="coment"><i class="fa-solid fa-comment"></i>- 30</h6>
+                      <h6 class="like"><i class="fa-solid fa-heart"></i>- 150</h6>
+                    </div>
+                  </div>
+                </div>

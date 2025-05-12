@@ -2,50 +2,85 @@ let posts = JSON.parse(localStorage.getItem("posts")) || [];
 if (posts.length > 0) {
     console.log("ta aqui");
     console.log(posts);
-    exibirPosts()
+    document.addEventListener("DOMContentLoaded", function () {
+    exibirPosts();
+});
 } else {
     console.log("nao ta aqui");
 }
 
 function SalvarPost() {
     document.getElementById("mensagem").textContent = "";
+    console.log("salvando post");
 
-    let titulo = document.getElementById("titulo").value.trim();
-    let conteudo = document.getElementById("conteudo").value.trim();
+    let imagem = document.getElementById("imagem").files[0];
+    if (imagem) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            const base64Image = e.target.result;  // Aqui está o base64Image sendo corretamente atribuído
+            console.log("foi");
+            
+            let titulo = document.getElementById("titulo").value.trim();
+            let conteudo = document.getElementById("conteudo").value.trim();
 
-    
-    let existe = posts.some(post => post.conteudo === conteudo);
-    if (existe) {
-        document.getElementById("mensagem").textContent = "Título já existe!";
-        return;
-    }
+            // Verificando se o conteúdo já existe
+            let existe = posts.some(post => post.conteudo === conteudo);
+            if (existe) {
+                document.getElementById("mensagem").textContent = "Título já existe!";
+                return;
+            }
 
-    if (titulo && conteudo) {
-        let post = {
-            titulo: titulo,
-            conteudo: conteudo,
-            data: new Date().toLocaleDateString()
+            if (titulo && conteudo) {
+                let post = {
+                    titulo: titulo,
+                    conteudo: conteudo,
+                    imagem: base64Image,  // Agora a imagem base64 será salva corretamente
+                    data: new Date().toLocaleDateString()
+                };
+
+                posts.push(post);  // Adicionando o post ao array
+                localStorage.setItem("posts", JSON.stringify(posts));  // Salvando os posts no localStorage
+                document.getElementById("mensagem").textContent = "Post salvo com sucesso!";
+                exibirPosts();  // Exibindo os posts após salvar
+            } else {
+                document.getElementById("mensagem").textContent = "Por favor, preencha título e conteúdo.";
+            }
         };
-        posts.push(post); 
-        localStorage.setItem("posts", JSON.stringify(posts));
-        document.getElementById("mensagem").textContent = "Post salvo com sucesso!";
+        
+        // Lendo o arquivo como URL de dados (base64)
+        reader.readAsDataURL(imagem);
     } else {
-        document.getElementById("mensagem").textContent = "Por favor, preencha título e conteúdo.";
+        // Caso a imagem não tenha sido selecionada
+        document.getElementById("mensagem").textContent = "Por favor, selecione uma imagem.";
     }
+}
+
+function limitarFrase(frase, limite) {
+  if (frase.length > limite) {
+    return frase.substring(0, limite) + "...";
+  }
+  return frase;
 }
 function exibirPosts() {
     let posts = JSON.parse(localStorage.getItem("posts")) || [];
     let postContainer = document.getElementById("posts");
-    postContainer.innerHTML = ""; // Limpa o conteúdo atual
+    
+    
 
     posts.forEach((post, index) => {
+      let postagem = document.createElement("div");
+      postagem.className = "postagem";
+      conteudo = limitarFrase(post.conteudo, 100);
+
+
         let postElement = document.createElement("div");
         postElement.className = "PostCont";
         postElement.setAttribute("data-index", index);
         postElement.addEventListener("click", abrirPost);
         postElement.innerHTML = `
+        <div class="PostImg"><img src="${post.imagem}" alt=""></div>
             <h2>${post.titulo}</h2>
-            <p>${post.conteudo}</p>
+            <p>${conteudo}</p>
             <div class="ifoPost">
                 <div class="bolinha"></div>
                 <h6 class="name">Maria Eduarda •</h6>
@@ -55,7 +90,8 @@ function exibirPosts() {
                 <h6 class="like"><i class="fa-solid fa-heart"></i>- 150</h6>
             </div>
         `;
-        postContainer.appendChild(postElement);
+        postContainer.appendChild(postagem);
+        postagem.appendChild(postElement);
     });
     
 }
