@@ -8,14 +8,14 @@
 }
 
 body {
-    background-color: #111827;
-    color: white;
+    background-color:#bc85a3 ;
+    color: rgb(255, 255, 255);
     font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
 }
 
 /* Header */
 header {
-    background-color: #1f2937;
+    background-color:#f9e1e0 ;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,12 +23,13 @@ header {
     height: 70px;
 }
 
+
 .logo h1 {
     font-family: "Anton", sans-serif;
     font-weight: 400;
     font-style: normal;
     margin-left: 20px;
-    color: rgb(103, 103, 255);
+    color: rgb(150, 110, 64);
 }
 
 ul {
@@ -38,6 +39,7 @@ ul {
     margin-right: 90px;
     font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
 }
+
 
 a {
     text-decoration: none;
@@ -59,11 +61,12 @@ a:hover {
 }
 
 body {
-    background-color: #111827;
+    background-color: #bc85a3;
     color: white;
     font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
     
 }
+
 .cabesalho{
     text-align: center;
 }
@@ -85,8 +88,8 @@ footer {
     gap: 10px;
     margin: 20px;
     padding: 20px;
-    background-color: #1f2937;
-    border-radius: 10px;
+    background-color: #660245 ;
+    border-radius: 20px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     height: 60%;
     width: 500px;
@@ -104,6 +107,7 @@ main{
     width: 100%;
     padding: 10px; 
     margin-bottom: 30px;
+    
   }
 .criarPost textarea{
     width: 100%;
@@ -115,8 +119,8 @@ button{
     width: 100%;
     padding: 12px;
     margin-top: 15px;
-    background-color: #6366f1;
-    color: white;
+    background-color: #feadb9;
+    color: rgb(150, 110, 64);;
     border: none;
     border-radius: 8px;
     font-size: 16px;
@@ -128,13 +132,13 @@ button{
 
 
 button:hover {
-    background-color: #818cf8;
+    background-color: #f9e1e0;
     transform: scale(1.05);
 }
 
 
 button:active {
-    background-color: #4b45db;
+    background-color: #121218;
     transform: scale(0.98);
 }
 
@@ -189,4 +193,15 @@ button:active {
 .PostHeader h2{
     margin-left: 20px;
     font-size: 22px;
+}
+input#imagem{
+    background-color:#350025;
+}
+input{
+    background-color: #feadb9;
+    border-radius: 10px;
+}
+textarea{
+    background-color: #feadc5;
+    border-radius: 10px;
 }
