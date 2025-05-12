@@ -6,14 +6,14 @@
 }
 
 body {
-    background-color: #220d3d;
+    background-color: #bc85a3;
     color: rgb(255, 255, 255);
     font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
 }
 
 /* Header */
 header {
-    background-color: #10081d;
+    background-color:#f9e1e0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -26,7 +26,7 @@ header {
     font-weight: 400;
     font-style: normal;
     margin-left: 20px;
-    color: rgb(131, 91, 58);
+    color:rgb(150, 110, 64);
 }
 
 ul {
@@ -47,7 +47,7 @@ a {
 }
 
 a:hover {
-    color: rgb(103, 103, 255);
+    color: #bc85a3 ;
     font-size: 18px;
     transition: all 0.3s ease-in-out;
 }
