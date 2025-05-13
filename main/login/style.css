@@ -5,14 +5,13 @@
 }
 
 body {
-    background-color: #bc85a3;
-    color: white;
+    background-color: #0a1a2f;
+    color: #f0f0f0;
     font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
 }
 
-/* Header */
 header {
-    background-color: #f9e1e0;
+    background-color: #123c69;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -21,11 +20,11 @@ header {
 }
 
 .logo h1, a {
-    font-family: "American Typewriter, serif";
+    font-family: "American Typewriter", serif;
     font-weight: 400;
     font-style: normal;
     margin-left: 20px;
-    color: rgb(150, 110, 64);
+    color: #d3d3d3;
 }
 
 ul {
@@ -33,20 +32,20 @@ ul {
     gap: 20px;
     list-style-type: none;
     margin-right: 90px;
-    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
 }
 
 a {
     text-decoration: none;
     transition: all 0.3s ease-in-out;
+    color: #d3d3d3;
 }
 
 H2 {
-    font-size:60px;
+    font-size: 60px;
     margin: 50px;
 }
 
-h4{
+h4 {
     font-size: 20px;
     margin-bottom: 30px;
 }
@@ -55,57 +54,61 @@ h4{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 70px); /* altura da tela menos o header */
+    height: calc(100vh - 70px);
 }
 
-/* Inputs com cor adaptada ao tema escuro */
-.cadastro input {
+/* Campos de entrada com destaque */
+input {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
-    border: none;
+    border: 2px solid #355c9c;
     border-radius: 8px;
-    background-color: #003780;
-    color: rgb(255, 255, 255);
+    background-color: #1f2e4d;
+    color: white;
     font-size: 14px;
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-.cadastro input::placeholder {
-    color: #ffffff;
+input::placeholder {
+    color: #a9b3c1;
 }
 
-/* botão do cadastro */
+input:focus {
+    outline: none;
+    border-color: #4ea8ff;
+    box-shadow: 0 0 8px #4ea8ff88;
+}
+
+/* Botão padrão */
 button {
     width: 100%;
     padding: 12px;
     margin-top: 15px;
-    background-color: #feadb9; /* Roxo suave */
-    color: rgb(150, 110, 64);;
+    background-color: #7b2cbf;
+    color: #ffffff;
     border: none;
     border-radius: 8px;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    text-align: center;
 }
 
-/* Hover: mudança suave de cor */
 button:hover {
-    background-color: #f9e1e0;
-    transform: scale(1.05); /* Dá um efeito de "zoom" no botão */
+    background-color: #a163e3;
+    transform: scale(1.05);
 }
 
-/* Clique: efeito de "pressionado" */
 button:active {
-    background-color: #5a166e; /* Cor de fundo mais escura */
-    transform: scale(0.98); /* Leve redução de tamanho */
+    background-color: #521b81;
+    transform: scale(0.98);
 }
 
- p {
+p {
     font-family: Arial, Helvetica, sans-serif;
     text-align: left;
-    color: #f9e1e0;
+    color: #d3d3d3;
 }
 
 H3 {
@@ -113,13 +116,12 @@ H3 {
     margin-top: 15px;
 }
 
-
-/* botão de criar conta  */
+/* Botão criar conta */
 .criarConta {
     width: 50%;
     padding: 12px;
     margin-top: 5px;
-    background-color: #feadb9; /* Roxo suave */
+    background-color: #7b2cbf;
     color: white;
     border: none;
     border-radius: 10px;
@@ -127,45 +129,28 @@ H3 {
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    text-align: center;
-}
-.criarConta{
-      color: rgb(150, 110, 64);;
-}
-/* Hover: mudança suave de cor */
-.criarConta:hover {
-    background-color: #f9e1e0;
-    transform: scale(1.05); /* Dá um efeito de "zoom" no botão */
 }
 
-/* Clique: efeito de "pressionado" */
-.criarConta:active {
-    background-color: #121218; /* Cor de fundo mais escura */
-    transform: scale(0.98); /* Leve redução de tamanho */
+.criarConta:hover {
+    background-color: #a163e3;
+    transform: scale(1.05);
 }
+
+.criarConta:active {
+    background-color: #521b81;
+    transform: scale(0.98);
+}
+
 .login {
     align-items: center;
-    background-color: #d400ff;
+    background-color: #7b2cbf;
     padding: 30px;
     border-radius: 20px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     width: 420px;
     text-align: center;
 }
-.form-container input {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: none;
-    border-radius: 8px;
-    background-color: #350025;
-    color: white;
-    font-size: 14px;
-}
 
-.form-container input::placeholder {
-    color: #9ca3af;
-}
 .form-wrapper {
     width: 100%;
     max-width: 460px;
@@ -175,14 +160,14 @@ H3 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 40px ;
+    margin-top: 40px;
     border-radius: 40px;
-    background-color: #660245;
+    background-color:#283a5c;
 }
 
 .form-slider {
     display: flex;
-    width: 200%; /* Login + Cadastro */
+    width: 200%;
     height: 100%;
     transition: transform 0.6s ease;
 }
@@ -192,7 +177,7 @@ H3 {
     height: 100%;
     padding: 30px;
     flex-shrink: 0;
-    background-color: #660245;
+    background-color: #1e2b44;
     border-radius: 30px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     display: flex;
