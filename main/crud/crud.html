@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> adicione uma tarefa</p>
+    <input id="entrada" type="text" value="teste">
+    <button onclick="salvarDados()">salvar</button>
+
+    <br>
+    <p>tarefa a fazer</p>
+    <div id="resultados"></div>
+
+
+    <script>
+        function salvarDados () {
+            let entrada =document.getElementById('entrada').value; 
+            console.log(entrada);
+        }
+    </script>
+</body>
+</html>
