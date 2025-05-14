@@ -3,7 +3,7 @@ from flask_cors import CORS
 from google import genai
 
 post = "mano meu dia foi muito bom, corri muito de carro"
-client = genai.Client(api_key="vai gerar uma pra ti corno")
+client = genai.Client(api_key="AIzaSyA89C0Py5BYiF5ns3wEYN4hqVtf8FUYeWM")
 
 app = Flask(__name__)
 CORS(app, resources={r"/api/*": {"origins": "*"}})

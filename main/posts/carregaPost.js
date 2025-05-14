@@ -37,6 +37,21 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="conteudo">
           <p>${posts[identificador].conteudo}</p>
         </div>
+        <div class="aba de comentarios">
+          <div class="comentarios" id="comentarios">
+            <h2>Comentários</h2>
+            <hr>
+            <div class="resposta" id="comentario">x</div>
+            <hr>
+            <div class="respostaHater" id="comentario">x</div>
+            <hr>
+            <div class="respostaAmor" id="comentario">x</div>
+            <hr>
+          </div>
+          <div class="comentar">
+            <input id="comentarioInput" type="text" placeholder="Comentar...">
+            <button onclick="comentar()">Enviar</button>
+          </div>  
       </div>  
     `;
   });

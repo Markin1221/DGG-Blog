@@ -105,7 +105,7 @@ function abrirPost(event) {
     localStorage.setItem("postAtual", identificador);
   
     // Redireciona para a página onde 'postGrande' está
-    window.location.href = "./posts/postsTeste.html";
+    window.location.href = "./posts/PostAberto.html";
   }
   
 function abrirPostt() {
@@ -123,8 +123,9 @@ function abrirPostt() {
       console.warn("Identificador inválido ou post não encontrado.");
       return;
     }
-    window.location.href = "./posts/postsTeste.html";
-  
+    
+  window.location.href = "./posts/PostAberto.html";
+    
     let PostAberto = document.getElementById("postGrande");
   
     if (!PostAberto) {
@@ -139,6 +140,7 @@ function abrirPostt() {
           <div class="voltar" onclick="home()"><i class="fa-solid fa-arrow-left"></i></div>
           <h2>${posts[identificador].titulo}</h2>
         </div>
+        <h2 class="dataPost">fodase</h2>
         <div class="donoPost">
           <img class="FotoUsuario" src="../imagens/usuario.jpg" alt="">
           <div class="nomeEArroba">
@@ -146,9 +148,23 @@ function abrirPostt() {
             <h2 class="arroba">@MarkinLindo</h2>
           </div>
         </div>
+        <h2 class="dataPost">fodase</h2>
         <div class="conteudo">
           <p>${posts[identificador].conteudo}</p>
         </div>
+        <h2 class="dataPost">fodase</h2>
+        <div class="aba de comentarios">
+          <div class="comentarios">
+            <h2>Comentários</h2>
+            <div class="resposta" id="comentario"></div>
+            <div class="respostaHater" id="comentario"></div>
+            <div class="respostaAmor" id="comentario"></div>
+          </div>
+          <div class="comentar">
+            <input type="text" placeholder="Comentar...">
+            <button onclick="debug()">Enviar</button>
+          </div>
+
       </div>  
     `;
   }
