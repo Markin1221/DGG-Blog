@@ -1,0 +1,25 @@
+/*estilo da barra de busca*/
+#search-input {
+   
+    padding: 6px;
+    border: none;
+    border-radius: 30px;
+    margin-right: 150px;
+    width: 800px; /* Largura da barra de busca */
+    background-color: #0e2d42;
+    justify-content: space-between;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#search-button {
+
+    border: none;
+    border-radius: 30px;
+    padding: 9px 12px;
+    cursor: pointer;
+    color: white;
+    
+}
+#search-button:hover {
+    background-color: #3a8cc1; 
+}

@@ -1,0 +1,34 @@
+body.light-mode {
+    background-color: #f0f0f0;
+    color: #111827;
+}
+
+header.light-mode {
+    background-color: #111827;
+}
+
+a.light-mode {
+    color: #111827;
+}
+
+a.light-mode:hover {
+    color: rgb(103, 103, 255);
+}
+
+.postagem.light-mode {
+    background-color: #ffffff;
+}
+
+.PostCont.light-mode h2,
+.PostCont.light-mode p {
+    color: #111827;
+}
+
+.ifoPost.light-mode h6 {
+    color: #111827;
+}
+
+.bolinha.light-mode {
+    background-color: blue;
+    
+}
