@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0a1a2f;
+    color: #f0f0f0;
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+}
+
+header {
+    background-color: #123c69;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    height: 70px;
+}
+
+.logo h1, a {
+    font-family: "American Typewriter", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-left: 20px;
+    color: #d3d3d3;
+}
+
+ul {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+    margin-right: 90px;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    color: #d3d3d3;
+}
+
+H2 {
+    font-size: 60px;
+    margin: 50px;
+}
+
+h4 {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 70px);
+}
+
+/* Campos de entrada com destaque */
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #355c9c;
+    border-radius: 8px;
+    background-color: #1f2e4d;
+    color: white;
+    font-size: 14px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input::placeholder {
+    color: #a9b3c1;
+}
+
+input:focus {
+    outline: none;
+    border-color: #4ea8ff;
+    box-shadow: 0 0 8px #4ea8ff88;
+}
+
+/* Botão padrão */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background-color: #7b2cbf;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #a163e3;
+    transform: scale(1.05);
+}
+
+button:active {
+    background-color: #521b81;
+    transform: scale(0.98);
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    color: #d3d3d3;
+}
+
+H3 {
+    font-size: small;
+    margin-top: 15px;
+}
+
+/* Botão criar conta */
+.criarConta {
+    width: 50%;
+    padding: 12px;
+    margin-top: 5px;
+    background-color: #7b2cbf;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.criarConta:hover {
+    background-color: #a163e3;
+    transform: scale(1.05);
+}
+
+.criarConta:active {
+    background-color: #521b81;
+    transform: scale(0.98);
+}
+
+.login {
+    align-items: center;
+    background-color: #7b2cbf;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    width: 420px;
+    text-align: center;
+}
+
+.form-wrapper {
+    width: 100%;
+    max-width: 460px;
+    height: 750px;
+    overflow: hidden;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    border-radius: 40px;
+    background-color:#283a5c;
+}
+
+.form-slider {
+    display: flex;
+    width: 200%;
+    height: 100%;
+    transition: transform 0.6s ease;
+}
+
+.form-container {
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    flex-shrink: 0;
+    background-color: #1e2b44;
+    border-radius: 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}

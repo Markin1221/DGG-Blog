@@ -1,20 +1,20 @@
 🎨 Tabela de Cores — Modo Escuro e Correspondente para Modo Claro
 Uso / Elemento	Cor no Modo Escuro	Equivalente para Modo Claro
-Fundo geral do site (body)rgb(122, 132, 146)	#f5f9ff
-Cabeçalho (header)	#123c69	#d0e2ff
-Cor dos textos principais	#f0f0f0	#1a1a1a
-Links (a) e logo	#d3d3d3	#333333
-Hover de link	#4ea8ff	#1d4ed8
-Placeholder em inputs e textarea	#a9b3c1	#6b7280
-Borda de input	#355c9c	#90b4e8
-Fundo de input e textarea	#1f2e4d	#eef4fb
-Sombra e foco no input	#4ea8ff88	#93c5fd88
-Fundo do card de post (.criarPost)	#1e2b44	#e5ecf7
-Fundo do post expandido (#postGrande)	#283a5c	#d9e4f7
-Fundo geral da área .conteudo	#0a1a2f	#f5f9ff
-Fundo do rodapé (footer)	#0a1a2f	#f0f4fb
-Botão padrão (button)	#7b2cbf	#c39af3
-Botão hover	#a163e3	#b288f2
-Botão pressionado	#521b81	#8b6cc9
-Cor do botão de texto	#ffffff	#ffffff
-Cor da arroba (.arroba)	gray	#666666
+Fundo geral do site (body)rgb(122, 132, 146)	           #f5f9ff
+Cabeçalho (header)	#123c69	                           #d0e2ff
+Cor dos textos principais	#f0f0f0	                   #1a1a1a
+Links (a) e logo	#d3d3d3	                           #333333
+Hover de link	#4ea8ff	                               #1d4ed8
+Placeholder em inputs e textarea	#a9b3c1	           #6b7280
+Borda de input	#355c9c	                               #90b4e8
+Fundo de input e textarea	#1f2e4d	                   #eef4fb
+Sombra e foco no input	#4ea8ff88	                       #93c5fd88
+Fundo do card de post (.criarPost)	#1e2b44	           #e5ecf7
+Fundo do post expandido (#postGrande)	#283a5c	       #d9e4f7
+Fundo geral da área .conteudo #0a1a2f                    #f5f9ff
+Fundo do rodapé (footer)	#0a1a2f	                   #f0f4fb
+Botão padrão (button)	#7b2cbf	                       #c39af3
+Botão hover	#a163e3	                               #b288f2
+Botão pressionado	#521b81	                           #8b6cc9
+Cor do botão de texto	#ffffff	                       #ffffff
+Cor da arroba (.arroba)	gray           	                #666666
