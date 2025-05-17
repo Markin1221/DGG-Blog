@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
         </div>
         <div class="conteudo">
-          <p>${posts[identificador].conteudo}</p>
+          <p class="comentarioInput">${posts[identificador].conteudo}</p>
         </div>
         <div class="aba de comentarios">
           <div class="comentarios" id="comentarios">

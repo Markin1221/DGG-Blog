@@ -1,10 +1,15 @@
-from google import genai
+from flask import Flask, request, jsonify
+from flask_cors import CORS
 
-client = genai.Client(api_key="")
+app = Flask(__name__)
+CORS(app)  # Habilita CORS para todas as rotas
 
-response = client.models.generate_content(
-    model="gemini-2.0-flash",
-    contents="Explain how AI works in a few words",
-)
+@app.route('/receive', methods=['POST'])
+def receive_data():
+    data = request.json
+    message = data.get("message", "Nada recebido")
+    print(f"Recebido do JS: {message}")
+    return jsonify({"status": "Recebido", "message": message})
 
-print(response.text)
+if __name__ == "__main__":
+    app.run(debug=True, host="127.0.0.1", port=5000)

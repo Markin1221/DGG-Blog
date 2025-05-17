@@ -1,3 +1,4 @@
+
 let posts = JSON.parse(localStorage.getItem("posts")) || [];
 if (posts.length > 0) {
     console.log("ta aqui");

@@ -1,6 +1,38 @@
+gerarComentario()
 comentarios();
 
+async function gerarComentario() {
+    const identificador = localStorage.getItem("postAtual");
+    let posts = JSON.parse(localStorage.getItem("posts"));
+   let  ConteudoComentario = posts[identificador].conteudo;
+
+
+    console.log("Enviando comentário:", ConteudoComentario);  // Log do conteúdo enviado
+
+    try {
+        let response = await fetch("http://127.0.0.1:5000/receive", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ conteudo: ConteudoComentario })
+        });
+
+        if (response.ok) {
+            console.log("Comentário enviado com sucesso.");
+            document.getElementById("comentarioInput").value = "";
+            atualizarComentarios();  // Atualiza os comentários após o envio
+        }
+    } catch (error) {
+        console.error("Erro ao enviar comentário:", error);
+    }
+}
+
+
+
+
 function comentarios(){
+    
     fetch("http://127.0.0.1:5000/api/comentarioIA")
                 .then(response => response.json())
                 .then(data => {
@@ -8,6 +40,7 @@ function comentarios(){
 
                     // Verifica se há um erro
                     if (data.erro) {
+                        document.querySelector(".resposta").innerHTML = ""
                         document.querySelector(".resposta").innerHTML = data.erro;
                     } else if (data.comentarioFan) {
                         document.querySelector(".resposta").innerHTML = data.comentarioFan;
@@ -30,6 +63,7 @@ function comentarios(){
 
                     // Verifica se há um erro
                     if (data.erro) {
+                        document.querySelector(".respostaHater").innerHTML = ""
                         document.querySelector(".respostaHater").innerHTML = data.erro;
                     } else if (data.comentarioHater) {
                         document.querySelector(".respostaHater").innerHTML = data.comentarioHater;
@@ -44,6 +78,7 @@ function comentarios(){
 
                     // Verifica se há um erro
                     if (data.erro) {
+                        document.querySelector(".respostaAmor").innerHTML = ""
                         document.querySelector(".respostaAmor").innerHTML = data.erro;
                     } else if (data.comentarioAmor) {
                         document.querySelector(".respostaAmor").innerHTML = data.comentarioAmor;
