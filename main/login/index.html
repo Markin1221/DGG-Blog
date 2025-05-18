@@ -1,86 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <title>Cadastro Page | AsmrProg</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css" />
+  <title>Login/Cadastro</title>
 </head>
-
 <body>
 
-    <header>
-        <div class="logo">
-            <h1><a href="../index.html">DGG Blog</a></h1>
-            <div class="borda"></div>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="about.html">Sobre</a></li>
-                <li><a href="contact.html">Contato</a></li>
-                <li><a href="" id="mudar-tema"><i class="fa-solid fa-sun"></i></a></li>
-                <li><a href="login.html"><i class="fa-solid fa-user"></i>Entrar</a></li>
-            </ul>
-        </nav>
-    </header>
-
-<!-- e tudo dentu!!! -->
 <div class="container-login">
-  
-  <!--bagulho da imagem-->
+  <!-- Lado da Imagem -->
   <div class="lado-imagem">
-    <img src="./imagens/usuario.jpg" alt="Imagem ao lado do formulário">
+    <img src="./imagens/usuario.jpg" alt="Imagem ao lado do formulário" />
   </div>
 
-  <!--login/cadstro-->
+  <!-- Formulários -->
   <div class="form-wrapper">
-    <div class="form-slider" id="formSlider">
+    <!-- LOGIN -->
+    <section class="form-container" id="login-form">
+      <h2>Login</h2>
+      <h4>Bem vindo ao nosso site de conversação</h4>
+      <form action="/login" method="post">
+        <p>Nome do usuário</p>
+        <input type="text" name="usuario" placeholder="Digite seu nome" required />
+        <p>Sua senha</p>
+        <input type="password" name="senha" placeholder="Digite sua senha" required />
+        <button type="submit">Entrar</button>
+        <h3>Ainda Não Tem Uma Conta?</h3>
+        <button type="button" class="switch-btn" onclick="mostrarCadastro()">Cadastre-se</button>
+      </form>
+    </section>
 
-      <!--login-->
-      <div class="form-container login">
-        <H2>Login</H2>
-        <H4>Bem vindo ao nosso site de conversação</H4>
-        <form action="/login" method="post">
-          <p>Nome do usuário</p>
-          <input type="text" name="usuario" placeholder="Digite seu nome">
-          <p>Sua senha</p>
-          <input type="password" name="senha" placeholder="Digite sua senha">
-          <button id="finalizaloguin">Entrar</button>
-          <h3>Ainda Não Tem Uma Conta?</h3>
-          <button class="criarConta">Cadastre-se</button>
-        </form>
-      </div>
-
-      <!--cadastro-->
-      <div class="form-container cadastro">
-        <h2>Cadastro</h2>
-        <form action="/cadastro" method="post">
-          <p>Nome do usuário</p>
-          <input type="text" name="usuario" placeholder="Digite seu nome">
-          <p>Sua senha</p>
-          <input type="password" name="senha" placeholder="Digite sua senha">
-          <p>Seu CPF</p>
-          <input type="text" name="cpf" placeholder="Digite seu CPF">
-          <p>Digite seu Email</p>
-          <input type="text" name="email" placeholder="Digite seu Gmail">
-          <p>Data de nascimento</p>
-          <input type="date" name="dataNacimento">
-          <h3>Já possui uma conta?</h3>
-          <button class="entrarConta">Login</button>
-        </form>
-      </div>
-
-    </div>
+    <!-- CADASTRO -->
+    <section class="form-container hidden" id="cadastro-form">
+      <h2>Cadastro</h2>
+      <form action="/cadastro" method="post">
+        <p>Nome do usuário</p>
+        <input type="text" name="usuario" placeholder="Digite seu nome" required />
+        <p>Sua senha</p>
+        <input type="password" name="senha" placeholder="Digite sua senha" required />
+        <p>Seu CPF</p>
+        <input type="text" name="cpf" placeholder="Digite seu CPF" required />
+        <p>Digite seu Email</p>
+        <input type="email" name="email" placeholder="Digite seu Email" required />
+        <p>Data de nascimento</p>
+        <input type="date" name="dataNascimento" required />
+        <h3>Já possui uma conta?</h3>
+        <button type="button" class="switch-btn" onclick="mostrarLogin()">Login</button>
+      </form>
+    </section>
   </div>
 </div>
 
-    <script src="script.js"></script>
-</body>
+<script src="script.js"></script>
 
+</body>
+</html>
