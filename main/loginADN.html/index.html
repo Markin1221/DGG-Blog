@@ -1,75 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <title>Cadastro Page | AsmrProg</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css" />
+  <title>Login/Cadastro</title>
 </head>
-
 <body>
 
-    <header>
-        <div class="logo">
-            <h1><a href="../index.html">DGG Blog</a></h1>
-            <div class="borda"></div>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="about.html">Sobre</a></li>
-                <li><a href="contact.html">Contato</a></li>
-                <li><a href="" id="mudar-tema"><i class="fa-solid fa-sun"></i></a></li>
-                <li><a href="login.html"><i class="fa-solid fa-user"></i>Entrar</a></li>
-            </ul>
-        </nav>
-    </header>
+<div class="container-login">
+  <!-- Lado da Imagem -->
+  <div class="lado-imagem">
+    <img src="./imagens/usuario.jpg" alt="Imagem ao lado do formulário" />
+  </div>
 
-<div class="form-wrapper">
-  <div class="form-slider" id="formSlider">
-    <div class="form-container login">
-      <H2>Login ADM</H2>
-      <H4>Bem vindo adiministrador</H4>
+  <!-- Formulários -->
+  <div class="form-wrapper">
+    
+    <!-- LOGIN -->
+    <section class="form-container visivel" id="login-form">
+      <h2>Login</h2>
+      <h4>Bem vindo Adiministrador</h4>
       <form action="/login" method="post">
         <p>Nome do usuário</p>
-        <input type="text" name="usuario" placeholder="Digite seu nome">
+        <input type="text" name="usuario" placeholder="Digite seu nome" required />
         <p>Sua senha</p>
-        <input type="password" name="senha" placeholder="Digite sua senha">
-        <button id="finalizaloguin">Entrar</button>
-        <h3>Ainda Não Tem Uma Conta ?</h3>
-        <button class="criarConta">Cadastre-se</button>
+        <input type="password" name="senha" placeholder="Digite sua senha" required />
+        <button type="submit" onclick="entrar()">Entrar</button>
+        <h3>Ainda Não Tem Uma Conta?</h3>
+        <button type="button" class="switch-btn" onclick="mostrarCadastro()">Cadastre-se</button>
       </form>
-    </div>
+    </section>
 
-    <div class="form-container cadastro">
+    <!-- CADASTRO -->
+    <section class="form-container oculto" id="cadastro-form">
       <h2>Cadastro ADM</h2>
       <form action="/cadastro" method="post">
         <p>Nome do usuário</p>
-        <input type="text" name="usuario" placeholder="Digite seu nome">
+        <input type="text" name="usuario" placeholder="Digite seu nome" required />
         <p>Sua senha</p>
-        <input type="password" name="senha" placeholder="Digite sua senha">
+        <input type="password" name="senha" placeholder="Digite sua senha" required />
         <p>Seu CPF</p>
-        <input type="text" name="cpf" placeholder="Digite seu CPF">
+        <input type="text" name="cpf" placeholder="Digite seu CPF" required />
         <p>Digite seu Email</p>
-        <input type="text" name="email" placeholder="Digite seu Gmail">
+        <input type="email" name="email" placeholder="Digite seu Email" required />
         <p>Data de nascimento</p>
-        <input type="date" name="dataNacimento">
-        <h3>Ja você ja possui uma conta ?</h3>
-        <button class="entrarConta">Login</button>
+        <input type="date" name="dataNascimento" required />
+        <h3>Já possui uma conta ADM?</h3>
+        <button type="button" class="switch-btn" onclick="mostrarLogin()">Login</button>
       </form>
-    </div>
+    </section>
+
   </div>
-</div>  
+</div>
 
-
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
-
 </html>

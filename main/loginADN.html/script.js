@@ -1,22 +1,37 @@
+function mostrarCadastro() {
+  const loginForm = document.getElementById("login-form");
+  const cadastroForm = document.getElementById("cadastro-form");
 
-document.addEventListener('DOMContentLoaded', () => {
-    const btnToLogin = document.querySelector('.entrarConta');
-    const btnToRegister = document.querySelector('.criarConta');
-    const formSlider = document.getElementById('formSlider');
-    const logarBtn = document.getElementById('finalizaloguin');
+  // some com o login com fadeOut
+  loginForm.style.animation = "fadeOut 0.4s ease forwards";
 
-    btnToRegister.addEventListener('click', (e) => {
-        e.preventDefault();
-        formSlider.style.transform = "translateX(-100%)";
-    });
+  setTimeout(() => {
+    loginForm.classList.remove("visivel");
+    loginForm.classList.add("oculto");
 
-    btnToLogin.addEventListener('click', (e) => {
-        e.preventDefault();
-        formSlider.style.transform = "translateX(0)";
-    });
+    cadastroForm.classList.remove("oculto");
+    cadastroForm.classList.add("visivel");
+    cadastroForm.style.animation = "fadeIn 0.4s ease forwards";
+  }, 400);
+}
 
-    logarBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        window.location.href = "../index.html";
-    });
-});
+function mostrarLogin() {
+  const loginForm = document.getElementById("login-form");
+  const cadastroForm = document.getElementById("cadastro-form");
+
+  // some com o cadastro com fadeOut
+  cadastroForm.style.animation = "fadeOut 0.4s ease forwards";
+
+  setTimeout(() => {
+    cadastroForm.classList.remove("visivel");
+    cadastroForm.classList.add("oculto");
+
+    loginForm.classList.remove("oculto");
+    loginForm.classList.add("visivel");
+    loginForm.style.animation = "fadeIn 0.4s ease forwards";
+  }, 400);
+}
+function entrar() {
+  // Aqui você pode colocar validação se quiser
+  window.location.href = "../index.html"; // Altere o nome conforme sua estrutura
+}
