@@ -55,12 +55,14 @@
       // Colunas de dados
       const tdNome = document.createElement('td');
       tdNome.textContent = conta.nome;
-      linha.appendChild(tdNome);
+      linha.appendChild(tdNome);                          
 
       const tdEmail = document.createElement('td');
       tdEmail.textContent = conta.email;
       linha.appendChild(tdEmail);
 
+//o createElement e o ideal e coreto a se utilizar nesse caso(para montar uma lista de contas dinamicamente)
+      
       const tdAdmin = document.createElement('td');
       tdAdmin.textContent = conta.admin ? "Sim" : "Não";
       tdAdmin.className = conta.admin ? 'admin' : 'nao-admin';
