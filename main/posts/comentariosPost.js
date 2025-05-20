@@ -86,6 +86,20 @@ function comentarios(){
                         document.querySelector(".respostaAmor").innerHTML = "Nenhum comentário recebido.";
                     }
                 })
+                fetch("http://127.0.0.1:5000/api/comentarioIA4")
+    .then(response => response.json())
+    .then(data => {
+        console.log("Resposta recebida do filósofo:", data);
+
+        if (data.erro) {
+            document.querySelector(".respostaFilosofo").innerHTML = data.erro;
+        } else if (data.comentarioFilosofo) {
+            document.querySelector(".respostaFilosofo").innerHTML = data.comentarioFilosofo;
+        } else {
+            document.querySelector(".respostaFilosofo").innerHTML = "Nenhum comentário recebido.";
+        }
+    })
+
 }
 function comentar() {
     let comentario = document.getElementById("comentarioInput").value;

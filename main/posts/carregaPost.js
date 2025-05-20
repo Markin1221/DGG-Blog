@@ -47,6 +47,8 @@ document.addEventListener("DOMContentLoaded", () => {
             <hr>
             <div class="respostaAmor" id="comentario">x</div>
             <hr>
+            <div class="respostaFilosofo" id="comentario">x</div>
+            <hr>
           </div>
           <div class="comentar">
             <input id="comentarioInput" type="text" placeholder="Comentar...">
