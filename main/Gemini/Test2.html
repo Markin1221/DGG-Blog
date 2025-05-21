@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enviar para Python (Flask)</title>
+</head>
+<body>
+    <h1>Enviar Informação para Python (Flask)</h1>
+    <input type="text" id="message" placeholder="Digite algo...">
+    <button onclick="sendData()">Enviar</button>
+
+    <script>
+        async function sendData() {
+             const message = document.getElementById("message").value;
+
+            try {
+                const response = await fetch("http://127.0.0.1:5000/receive", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({ message })
+                });
+
+                const result = await response.json();
+                console.log("Resposta do Flask:", result);
+            } catch (error) {
+                console.error("Erro:", error);
+            }
+        }
+    </script>
+</body>
+</html>

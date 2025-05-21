@@ -1,0 +1,33 @@
+.input-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #bbbbbb;
+    padding: 8px 18px;
+    border-radius: 30px;
+    gap: 8px;  
+    width: 800px;
+    
+}
+
+.input-icon {
+    min-width: 30px;
+    min-height: 30px;
+    background-color: #0a1a2f;
+    color: #ffffff;
+    border-radius: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.input-field {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    color: rgb(0, 0, 0)
+}
+
+.input-field:focus {
+    outline: none;
+}
