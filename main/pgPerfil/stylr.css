@@ -28,8 +28,11 @@ header {
 }
 
 .logo h1 {
-  font-family: "American Typewriter", serif;
-  color: #d3d3d3;
+    font-family: "American Typewriter, serif";
+    font-weight: 400;
+    font-style: normal;
+    margin-left: 20px;
+    color: #a163e3; /* Roxo claro */
 }
 
 ul {
