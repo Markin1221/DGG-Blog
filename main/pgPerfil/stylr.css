@@ -1,0 +1,199 @@
+/* ===== reset e base ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: #0a1a2f;
+  color: #f0f0f0;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== header ===== */
+header {
+  background-color: #123c69;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  padding: 0 20px;
+}
+
+.logo h1 {
+  font-family: "American Typewriter", serif;
+  color: #d3d3d3;
+}
+
+ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+ul a {
+  color: #d3d3d3;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+ul a:hover {
+  color: #4ea8ff;
+}
+
+/* ===== main / container ===== */
+.main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.profile-container {
+  max-width: 900px;
+  width: 100%;
+}
+
+.profile-card {
+  background-color: #1e2b44;
+  border-radius: 20px;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* ===== avatar ===== */
+.avatar {
+  flex: 1;
+  background-color: #0a1a2f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.avatar img {
+  border-radius: 50%;
+  max-width: 150px;
+  max-height: 150px;
+  object-fit: cover;
+}
+
+/* ===== info e formulário ===== */
+.profile-info {
+  flex: 2;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-info h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.profile-info h4 {
+  font-size: 1.2rem;
+  color: #a9b3c1;
+  margin-bottom: 20px;
+}
+
+.profile-info p {
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+/* ===== formulários, inputs e botões ===== */
+.profile-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-form label {
+  margin-top: 12px;
+  margin-bottom: 4px;
+  font-size: 0.9rem;
+  color: #d3d3d3;
+}
+
+.profile-form input,
+.profile-form textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 12px;
+  border: 2px solid #355c9c;
+  border-radius: 8px;
+  background-color: #1f2e4d;
+  color: white;
+  font-size: 16px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.profile-form input::placeholder,
+.profile-form textarea::placeholder {
+  color: #a9b3c1;
+}
+
+.profile-form input:focus,
+.profile-form textarea:focus {
+  outline: none;
+  border-color: #4ea8ff;
+  box-shadow: 0 0 8px #4ea8ff88;
+}
+
+.profile-form button {
+  width: 50%;
+  padding: 14px;
+  margin-top: 20px;
+  background-color: #7b2cbf;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.profile-form button:hover {
+  background-color: #a163e3;
+  transform: scale(1.05);
+}
+
+.profile-form button:active {
+  background-color: #521b81;
+  transform: scale(0.98);
+}
+
+/* botão extra de “Editar Senha” */
+.criarConta {
+  width: 50%;
+  padding: 12px;
+  margin-top: 20px;
+  background-color: #7b2cbf;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.criarConta:hover {
+  background-color: #a163e3;
+  transform: scale(1.05);
+}
+
+.criarConta:active {
+  background-color: #521b81;
+  transform: scale(0.98);
+}

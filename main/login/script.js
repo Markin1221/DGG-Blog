@@ -31,8 +31,7 @@ function mostrarLogin() {
     loginForm.style.animation = "fadeIn 0.4s ease forwards";
   }, 400);
 }
-function entrar(event) {
-  event.preventDefault()
+function entrar() {
   // Aqui você pode colocar validação se quiser
   window.location.href = "../index.html"; // Altere o nome conforme sua estrutura
 }
