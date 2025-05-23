@@ -147,9 +147,13 @@ button:active {
 }
 
 .FotoUsuario {
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
+   max-width: 100%;
+    max-height: 400px; /* ajuste conforme o necessário */
+    border-radius: 15px;
+    object-fit: cover; /* ou 'contain', dependendo do efeito desejado */
+    margin: 20px auto;
+    display: block;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .donoPost {
@@ -183,22 +187,72 @@ button:active {
 .postCompleto {
     height: 100%;
     width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
 }
 
+
 .conteudo {
-    margin-top: 100px;
     display: flex;
     justify-content: center;
     background-color: #0a1a2f;
+    padding: 20px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    flex-wrap: wrap;
 }
 
 .PostHeader {
-    margin-left: 40px;
-    display: flex;
-    font-size: 26px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
 }
 
 .PostHeader h2 {
     margin-left: 20px;
     font-size: 22px;
+}
+.postagem {
+    background-color: #1e2b44;
+    border-radius: 20px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.postagem:hover {
+    background-color: #283a5c;
+}
+
+.PostCont h2 {
+    margin: 10px 0 8px 0;
+    color: #d3d3d3;
+}
+
+.PostCont p {
+    color: #b0b7c1;
+    line-height: 1.4;
+}
+
+.PostImg img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.PostImg img:hover {
+    transform: scale(1.05);
+}
+
+#posts {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 0 15px;
 }
