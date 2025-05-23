@@ -213,46 +213,4 @@ button:active {
     margin-left: 20px;
     font-size: 22px;
 }
-.postagem {
-    background-color: #1e2b44;
-    border-radius: 20px;
-    padding: 15px;
-    margin-bottom: 20px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
 
-.postagem:hover {
-    background-color: #283a5c;
-}
-
-.PostCont h2 {
-    margin: 10px 0 8px 0;
-    color: #d3d3d3;
-}
-
-.PostCont p {
-    color: #b0b7c1;
-    line-height: 1.4;
-}
-
-.PostImg img {
-    width: 100%;
-    max-height: 300px;
-    object-fit: cover;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
-    transition: transform 0.3s ease;
-    cursor: pointer;
-}
-
-.PostImg img:hover {
-    transform: scale(1.05);
-}
-
-#posts {
-    max-width: 700px;
-    margin: 50px auto;
-    padding: 0 15px;
-}
