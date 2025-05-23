@@ -76,3 +76,4 @@ document.addEventListener('DOMContentLoaded', function() {
 function entrar() {
   window.location.href = "../index.html"; // Altere o nome conforme sua estrutura
 }
+
