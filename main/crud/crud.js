@@ -36,6 +36,7 @@ function entrar() {
     alert("Por favor, preencha todos os campos.");
     return;
   }
+  entrar()
 }
 
 function cadastrar() {
