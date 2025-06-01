@@ -95,6 +95,7 @@ main {
     gap: 20px;
 }
 
+
 .criarPost input,
 .criarPost textarea,
 input#imagem {
@@ -147,18 +148,18 @@ button:active {
 }
 
 .FotoUsuario {
-   max-width: 100%;
-    max-height: 400px; /* ajuste conforme o necessário */
-    border-radius: 15px;
+   width: 50px;
+    height: 50px; /* ajuste conforme o necessário */
+    border-radius: 50%;
     object-fit: cover; /* ou 'contain', dependendo do efeito desejado */
-    margin: 20px auto;
-    display: block;
+    
+    
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .donoPost {
     display: flex;
-    margin-top: 50px;
+    margin-top: 10px;
 }
 
 .nomeEArroba {
@@ -178,24 +179,33 @@ button:active {
 
 #postGrande {
     display: flex;
-    align-items: center;
-    height: 700px;
+    flex-direction: column; /* ESSENCIAL para empilhar */
+    height: auto;
     width: 60%;
-    background-color: #283a5c; /* fundo similar ao .form-wrapper do primeiro CSS */
+    border-radius: 15px;
+    background-color: #283a5c;
+    padding: 10px;
+
+}
+.maisPoLado{
+    margin-left: -5px;
 }
 
 .postCompleto {
-    height: 100%;
+    height: auto;
     width: 100%;
-    max-width: 700px;
-    margin: 0 auto;
+    margin-left: 5px;
+    
+}
+.postCompleto hr{
+    margin: 0;
 }
 
 
 .conteudo {
     display: flex;
-    justify-content: center;
-    background-color: #0a1a2f;
+    align-items: flex-start; /* ajusta o alinhamento para o topo */
+    height: auto; /* Removido o 35% */
     padding: 20px;
     word-wrap: break-word;
     overflow-wrap: break-word;
@@ -207,10 +217,114 @@ button:active {
     max-width: 100%;
     height: auto;
     border-radius: 15px;
+    
 }
 
 .PostHeader h2 {
     margin-left: 20px;
     font-size: 22px;
 }
+.comentar{
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+}
+.comentar input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #1f2e4d;
+    color: white;
+    border: 2px solid #355c9c;
+    border-radius: 10px;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.botoesComentarios {
+  text-align: center;
+  margin: 10px;
+}
 
+.botoesComentarios button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.botoesComentarios button:hover {
+  background-color: #0056b3;
+}
+#abaComentarios{
+    display: none; /* controlado por JS */
+    height: auto;
+    max-height: 300px; /* limite para a aba de comentários */
+    overflow-y: auto;  /* scroll interno se passar do limite */
+    margin-top: 15px;
+    padding: 10px;
+    width: 100%;
+    background-color: #1f2e4d;
+    border-radius: 10px;
+    
+}
+/* largura da scrollbar vertical */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* cor da "trilha" (background da scrollbar) */
+::-webkit-scrollbar-track {
+  background: #1f2e4d; 
+  border-radius: 10px;
+}
+
+/* cor da "thumb" (a parte que você arrasta) */
+::-webkit-scrollbar-thumb {
+  background-color: #4ea8ff; 
+  border-radius: 10px;
+  border: 3px solid #1f2e4d; /* cria um espaçamento interno */
+}
+
+/* efeito ao passar o mouse na thumb */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #7b2cbf;
+}
+.imagem{
+    width: 100%;
+    height: 100px;
+    height: auto;
+    border-radius: 15px;
+    margin-top: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.imagem img{
+    width: 100%;
+    height: 50px;
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover; /* garante que a imagem preencha o espaço */
+}
+hr {
+   background-color: #3f3f3f;
+    height: 2px;
+    border: none;
+}
+.comentarios{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.quadrado{
+    width: 100%;
+    height: 50px;
+    background-color: #1f2e4d;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}

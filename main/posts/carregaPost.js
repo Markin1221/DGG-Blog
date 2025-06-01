@@ -34,10 +34,16 @@ document.addEventListener("DOMContentLoaded", () => {
             <h2 class="arroba">@MarkinLindo</h2>
           </div>
         </div>
+        <div class="imagem maisPoLado">
+          <img src="${posts[identificador].imagem}" alt="Imagem do Post"> 
+        </div>
         <div class="conteudo">
           <p class="comentarioInput">${posts[identificador].conteudo}</p>
         </div>
-        <div class="aba de comentarios">
+        <div class="botoesComentarios">
+           <button id="btnComentarios" onclick="mostrarComentarios(); comentarios();">Mostrar Comentários</button>
+        </div>
+        <div class="maisPoLado" id="abaComentarios" style="display: none;">
           <div class="comentarios" id="comentarios">
             <h2>Comentários</h2>
             <hr>
@@ -49,12 +55,19 @@ document.addEventListener("DOMContentLoaded", () => {
             <hr>
             <div class="respostaFilosofo" id="comentario">x</div>
             <hr>
-          </div>
-          <div class="comentar">
+            <div class="comentar">
             <input id="comentarioInput" type="text" placeholder="Comentar...">
             <button onclick="comentar()">Enviar</button>
-          </div>  
+          </div> 
+          </div>
       </div>  
     `;
   });
   
+function mostrarComentarios() {
+  const aba = document.getElementById('abaComentarios');
+  const btn = document.getElementById('btnComentarios');
+
+  aba.style.display = 'block';
+  btn.style.display = 'none';
+}

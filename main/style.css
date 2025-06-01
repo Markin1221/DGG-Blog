@@ -24,9 +24,16 @@ header {
     height: 70px;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .logo h1 {
-    font-family: "American Typewriter, serif";
+    font-family: "WDXL Lubrifont TC", sans-serif;
     font-weight: 400;
+    font-size: 40px;
     font-style: normal;
     margin-left: 20px;
     color: #a163e3; /* Roxo claro */
@@ -58,20 +65,33 @@ a:hover {
 .fa-user {
     margin-right: 6px;
 }
-.criarPost{
-    background-color: #4ea8ff; /* Azul claro */
-    color: #f0f0f0; /* Texto claro */
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    height: 40px;
-    width: 40px;
-    border-radius: 20px;
-    font-style: normal;
-    border-radius: 5px;
-    padding: 10px 20px;
-    margin-right: 20px;
+.criarPost {
+    margin-top: 20px;
+    background-color: #4b0082; 
+    color: #c084fc; 
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: all 0.3s ease-in-out;
 }
+
+.criarPost:hover {
+    background-color: #36006b; 
+    box-shadow: 0 0 8px #c084fc;
+    transform: scale(1.05);
+}
+
+.criarPost svg {
+    width: 26px;
+    height: 26px;
+}
+
+
 
 /* Conteúdo dos Posts */
 .conteudo {
@@ -96,26 +116,29 @@ a:hover {
     flex-direction: column;
     margin: 0;
     padding: 0;
+    border: 1px solid #8800ff; 
+    box-shadow: 0 0 1px 1px #8800ff;
 }
 
 .PostImg {
     background-color: #4ea8ff; /* Azul claro */
-    width: 108%;
-    height: 110%;
+    width: 100%;
+    height: 200px;
     border-radius: 10px;
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: -30px;
+    
 }
 
 .PostImg img {
     width: 100%;
-    height: 60%;
-    border-radius: 10px;
+    height: 200px;
+    border-radius: 10px 10px 0 0;
     margin: 0;
     display: block;
+    object-fit: cover;
 }
 
 .CorMemb {
@@ -126,8 +149,8 @@ a:hover {
 }
 
 .PostCont {
-    margin-top: 20px;
-    margin-left: 30px;
+    padding: 0;
+    margin: 0;
 }
 
 .PostCont h2 {
@@ -135,13 +158,18 @@ a:hover {
     font-style: normal;
     color: #f0f0f0; /* Texto claro */
     font-size: 20px;
+    margin-top: 10px;
+    margin-left: 8px;
 }
 
 .PostCont p {
     font-weight: 400;
     font-style: normal;
     color: #d3d3d3; /* Texto secundário */
-    margin-top: 20px;
+    margin-top: 10px;
+    margin-left: 10px;
+    height: 50px;
+    
 }
 
 .ifoPost {
@@ -149,6 +177,7 @@ a:hover {
     justify-content: space-between;
     margin-top: 20px;
     margin-right: 30px;
+    margin-left: 10px;
 }
 
 .bolinha {
@@ -180,5 +209,87 @@ h6 {
 @media (max-width: 768px) {
     .postagem {
         width: 100%; /* 1 post por linha em telas menores */
+    }
+}
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Header responsivo */
+header {
+    background-color: #123c69;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    height: 70px;
+    padding: 0 20px;
+    position: relative;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+    align-items: center;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    color: #a163e3;
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    nav {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: #123c69;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+        margin: 20px 0;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .container {
+        display: none; /* esconde a barra de pesquisa no mobile, se quiser */
     }
 }

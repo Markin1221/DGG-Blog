@@ -1,5 +1,5 @@
 gerarComentario()
-comentarios();
+
 
 async function gerarComentario() {
     const identificador = localStorage.getItem("postAtual");

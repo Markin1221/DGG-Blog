@@ -6,7 +6,9 @@
     <title>DGG Blog</title>
     <link rel="stylesheet" href="style.css">
 
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=WDXL+Lubrifont+TC&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
@@ -16,32 +18,33 @@
 </head>
 <body>
     <header>
-        <div class="logo">
-            <h1>DGG Blog</h1>
-            <div class="borda"></div>
-            
-        </div>  
+    <div class="logo">
+        <h1>DGG Blog</h1>
+    </div>  
 
-        <div class="container">
-            <div class="input-group">
-                <div class="input-icon">
+    <div class="container">
+        <div class="input-group">
+            <div class="input-icon">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
+            </div>
+            <input type="text" id="search" placeholder="Pesquisar" class="input-field">
+        </div>   
+    </div>
 
-                <input type="text" id="search" placeholder="Pesquisar" class="input-field">
-            </div>   
-        </div>
+    <div class="menu-icon" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+    </div>
 
+    <nav id="nav">
+        <ul>
+            <li><a href="about.html">Sobre</a></li>
+            <li><a href="contact.html">Contato</a></li>
+            <li onclick="mudarIcone()" id="switch"><a href="" id="mudar-tema"><i class="fa-solid fa-sun"></i></a></li>
+            <li><a href="login/index.html"><i class="fa-solid fa-user"></i>entrar</a></li>
+        </ul>
+    </nav>
+</header>
 
-        <nav>
-            <ul>
-                <li><a href="about.html">Sobre</a></li>
-                <li><a href="contact.html">Contato</a></li>
-                <li><a href="" id="mudar-tema"><i class="fa-solid fa-sun"></i></a></li>
-                <li><a href="login/index.html"><i class="fa-solid fa-user"></i>entrar</a></li>
-            </ul>
-        </nav>
-    </header>
     
         <main>
             <div class="conteudo">
@@ -49,7 +52,11 @@
                 <p>Seu espaço para compartilhar ideias e histórias.</p>
             
             </div>
-            <div class="criarPost" onclick="abrirCriarPost()">aqui é pra ta no meio da tela e com uma imagem de +</div>
+            <div class="criarPost" onclick="abrirCriarPost()"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" 
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
+        <line x1="12" y1="5" x2="12" y2="19"/>
+        <line x1="5" y1="12" x2="19" y2="12"/>
+    </svg></div>
 
             <div class="posts" id="posts">
                 
@@ -69,5 +76,11 @@
     <script src="./scripts/modoClaro.js"></script>
     <script src="./scripts/barraBusca.js"></script>
     <script src="./scripts/scriptPrincipal.js"></script>
+
+    <script>function toggleMenu() {
+    const nav = document.getElementById('nav');
+    nav.classList.toggle('active');
+}
+</script>
 </body>
 </html>
