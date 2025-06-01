@@ -42,7 +42,8 @@ function SalvarPost() {
                 posts.push(post);  // Adicionando o post ao array
                 localStorage.setItem("posts", JSON.stringify(posts));  // Salvando os posts no localStorage
                 document.getElementById("mensagem").textContent = "Post salvo com sucesso!";
-                exibirPosts();  // Exibindo os posts após salvar
+                exibirPosts(); 
+                apagarConteudo();
             } else {
                 document.getElementById("mensagem").textContent = "Por favor, preencha título e conteúdo.";
             }
@@ -54,6 +55,7 @@ function SalvarPost() {
         // Caso a imagem não tenha sido selecionada
         document.getElementById("mensagem").textContent = "Por favor, selecione uma imagem.";
     }
+    
 }
 
 function limitarFrase(frase, limite) {
@@ -182,5 +184,8 @@ function home() {
     window.location.href = "../index.html";
   }
 
+function apagarConteudo(){
+  document.getElementById("formulario").reset();
+}
 
 /**mano,alguem tem que fazer essas funçoes ai ne */

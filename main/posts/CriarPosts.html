@@ -21,7 +21,7 @@
 
     <main>
         <div class="criarPost">
-            <div id="formulario">
+            <form id="formulario">
                 <label for="titulo">Título:</label>
                 <input type="text" id="titulo" name="titulo" required><br>
                 <label for="conteudo">Conteúdo:</label>
@@ -29,7 +29,7 @@
                 <label for="imagem">Imagem:</label>
                 <input type="file" id="imagem" name="imagem" accept="image/*"><br>
                 <button type="submit" onclick="SalvarPost()">publicar </button>
-            </div>
+            </form>
             <p id="mensagem"></p>
         </div>
     </main>
