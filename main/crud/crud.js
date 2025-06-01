@@ -83,10 +83,3 @@ document.addEventListener('DOMContentLoaded', function() {
     event.preventDefault();
     cadastrar();
   });
-
-  const loginForm = document.querySelector('#login-form form');
-  loginForm.addEventListener('submit', function(event) {
-    event.preventDefault();
-    entrar();
-  });
-});
