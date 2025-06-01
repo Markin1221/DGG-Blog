@@ -84,7 +84,7 @@ function exibirPosts() {
             <p>${conteudo}</p>
             <div class="ifoPost">
                 <div class="bolinha"></div>
-                <h6 class="name">Maria Eduarda •</h6>
+                <h6 class="name">markin •</h6>
                 <h6 class="date">${post.data}</h6>
                 <h6 class="hour">18:45</h6>
                 <h6 class="coment"><i class="fa-solid fa-comment"></i>- 30</h6>
