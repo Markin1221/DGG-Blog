@@ -21,7 +21,7 @@
     <section class="form-container visivel" id="login-form">
       <h2>Login</h2>
       <h4>Bem vindo ao nosso site de conversação</h4>
-      <form action="/login" method="post">
+      <form id="login-form" action="/login" method="post">
         <p>Nome do usuário</p>
         <input type="text" name="usuario" placeholder="Digite seu nome" required />
         <p>Sua senha</p>
@@ -35,7 +35,7 @@
     <!-- CADASTRO -->
     <section class="form-container oculto" id="cadastro-form">
       <h2>Cadastro</h2>
-      <form action="/cadastro" method="post">
+      <form id="cadastro-form" action="/cadastro" method="post">
         <p>Nome do usuário</p>
         <input type="text" name="usuario" placeholder="Digite seu nome" required />
         <p>Sua senha</p>
@@ -47,7 +47,8 @@
         <p>Data de nascimento</p>
         <input type="date" name="dataNascimento" required />
         <h3>Já possui uma conta?</h3>
-        <button type="button" class="switch-btn" onclick="mostrarLogin()">Cadastre-se</button>
+        <button type="button" class="switch-btn" onclick="mostrarLogin()">Login</button>
+        <button type="submit">Cadastrar</button>
       </form>
     </section>
 

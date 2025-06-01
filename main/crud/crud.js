@@ -1,4 +1,4 @@
-// trocar de loin pra cadastro
+// trocar de login para cadastro
 function mostrarCadastro() {
   document.getElementById('login-form').classList.remove('visivel');
   document.getElementById('login-form').classList.add('oculto');
@@ -6,7 +6,7 @@ function mostrarCadastro() {
   document.getElementById('cadastro-form').classList.add('visivel');
 }
 
-// trocar de cadastro pra login
+// trocar de cadastro para login
 function mostrarLogin() {
   document.getElementById('cadastro-form').classList.remove('visivel');
   document.getElementById('cadastro-form').classList.add('oculto');
@@ -35,6 +35,16 @@ function entrar() {
   if (!usuarioInput || !senhaInput) {
     alert("Por favor, preencha todos os campos.");
     return;
+  }
+
+  const usuarios = buscarUsuarios();
+  const usuarioEncontrado = usuarios.find(usuario => usuario.usuario === usuarioInput && usuario.senha === senhaInput);
+
+  if (usuarioEncontrado) {
+    alert("Login realizado com sucesso!");
+    window.location.href = "../index.html"; // Altere o nome conforme sua estrutura
+  } else {
+    alert("Usuário ou senha incorretos.");
   }
 }
 
@@ -66,14 +76,17 @@ function cadastrar() {
     mostrarLogin();
   }
 }
+
 document.addEventListener('DOMContentLoaded', function() {
   const cadastroForm = document.querySelector('#cadastro-form form');
   cadastroForm.addEventListener('submit', function(event) {
     event.preventDefault();
     cadastrar();
   });
-});
-function entrar() {
-  window.location.href = "../index.html"; // Altere o nome conforme sua estrutura
-}
 
+  const loginForm = document.querySelector('#login-form form');
+  loginForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    entrar();
+  });
+});
