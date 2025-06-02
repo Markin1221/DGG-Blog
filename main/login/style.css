@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -48,7 +47,7 @@ a {
     color: #d3d3d3;
 }
 
-H2 {
+h2 {
     font-size: 60px;
     margin: 50px;
 }
@@ -119,7 +118,7 @@ p {
     color: #d3d3d3;
 }
 
-H3 {
+h3 {
     font-size: small;
     margin-top: 15px;
 }
@@ -182,7 +181,7 @@ H3 {
 .form-wrapper {
     flex: 1;
     padding: 10px;
-    background-color:  #1e2b44;
+    background-color: #1e2b44;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -193,65 +192,45 @@ H3 {
 .form-container {
     background-color: #1e2b44;
     border-radius: 20px;
-    padding: 40px 30px; /* padding maior */
+    padding: 40px 30px;
     max-width: 420px;
     width: 100%;
-    height: 100%; /* ocupa toda altura do container */
-    display: flex;
+    height: 100%;
     text-align: center;
     color: white;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* centraliza verticalmente */
+    justify-content: center;
 }
 
-/* Esconde os formulários alternadamente */
-.hidden {
-    display: none;
-}
-.oculto {
-  pointer-events: none;
-  opacity: 0;
-  position: absolute;
-}
-
-.visivel {
-  pointer-events: all;
-  opacity: 1;
-  position: relative;
-  animation: fadeIn 0.5s ease forwards;
-}
-
+/* Animações de entrada */
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateX(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
-@keyframes fadeOut {
-  from {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  to {
-    opacity: 0;
-    transform: translateX(-30px);
-  }
-}
-.mensagem-erro {
-  color: red;
-  background-color: #ffe6e6;
-  border: 1px solid red;
-  padding: 10px;
-  margin-bottom: 15px;
-  border-radius: 5px;
+/* Formulário visível/invisível */
+.visivel {
+    display: block;
+    animation: fadeIn 0.5s ease forwards;
 }
 
 .oculto {
-  display: none;
+    display: none !important;
+}
+
+/* Mensagem de erro */
+.mensagem-erro {
+    color: red;
+    background-color: #ffe6e6;
+    border: 1px solid red;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
 }

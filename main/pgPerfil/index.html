@@ -25,8 +25,9 @@
         </div>
         <div class="profile-info">
           <h2 id="nome-usuario">Nome do usuário</h2>
-          <h4 id="email-usuario">email@exemplo.com</h4>
-          <p id="bio-usuario">Bio padrão...</p>
+          <h4 id="email-usuario">email@exemplo.com</h4>         
+          <p><strong>CPF:</strong> <span id="cpf-usuario">000.000.000-00</span></p>
+          <p><strong>Senha:</strong> <span id="senha-usuario">••••••••</span></p>
 
           <form class="profile-form">
             <label for="name">Nome completo</label>
@@ -38,16 +39,16 @@
             <label for="bio">Bio</label>
             <textarea id="bio" rows="4"></textarea>
 
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" />
+
             <button type="submit">Salvar Alterações</button>
           </form>
-
-          <button class="criarConta">Editar Senha</button>
         </div>
       </div>
     </div>
   </main>
 
-  <!-- Script para preencher os dados -->
   <script src="script.js"></script>
 </body>
 </html>
