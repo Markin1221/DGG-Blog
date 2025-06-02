@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (usuarioLogado && logadoElement) {
         logadoElement.innerHTML = `
             <li id="logado">
-                <a href="login/index.html">
+                <a href="./pgPerfil/index.html">
                     <i class="fa-solid fa-user"></i> ${usuarioLogado.usuario}
                 </a>
             </li>
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } else if(logadoElement) {
         logadoElement.innerHTML = `
             <li id="logado">
-                <a href="login/index.html">
+                <a href="./pgPerfil/index.html">
                     <i class="fa-solid fa-user"></i> Login
                 </a>
             </li>
