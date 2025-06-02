@@ -1,3 +1,5 @@
+let usuarioentrou = false
+let nomeusuario = ""
 function mostrarCadastro() {
   document.getElementById('login-form').classList.remove('visivel');
   document.getElementById('login-form').classList.add('oculto');
@@ -44,9 +46,14 @@ function entrar() {
   if (usuarioEncontrado) {
     localStorage.setItem('usuarioLogado', JSON.stringify(usuarioEncontrado));
     alert("Login realizado com sucesso!");
-    window.location.href = "../perfil/perfil.html";
+    usuarioentrou = true
+    nomeusuario = usuarioInput
+    logado()
+    window.location.href = "../index.html";
   } else {
     alert("Usuário ou senha incorretos.");
+    usuarioentrou = false 
+    nomeusuario = ""
   }
 }
 
@@ -114,4 +121,8 @@ document.addEventListener('DOMContentLoaded', function () {
     entrar();
   });
 });
+function logado(){
+  let logado = document.getElementById('logado')
+  logado.innerHTML = `<li id="logado"><a href="login/index.html"><i class="fa-solid fa-user"></i>${nomeusuario}</a></li>`
 
+}
