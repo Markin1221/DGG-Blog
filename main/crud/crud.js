@@ -11,7 +11,6 @@ function mostrarLogin() {
   document.getElementById('login-form').classList.remove('oculto');
   document.getElementById('login-form').classList.add('visivel');
 
-  // Limpa mensagens de erro ao voltar para o login
   const mensagemErro = document.getElementById('mensagem-erro');
   if (mensagemErro) {
     mensagemErro.classList.add('oculto');
@@ -70,10 +69,10 @@ function cadastrar() {
   }
 
   const usuarios = buscarUsuarios();
-  const existeEmailOuSenha = usuarios.find(u => u.email === email || u.senha === senha);
+  const existeEmailOuCpf = usuarios.find(u => u.email === email || u.cpf === cpf);
 
-  if (existeEmailOuSenha) {
-    mensagemErro.textContent = "Email ou senha já cadastrados. Tente outros.";
+  if (existeEmailOuCpf) {
+    mensagemErro.textContent = "Email ou CPF já cadastrados. Tente outros.";
     mensagemErro.classList.remove('oculto');
     return;
   }
