@@ -15,15 +15,12 @@ function mostrarLogin() {
 }
 
 function salvarUsuario(usuarioObj) {
-  // converte string em array
   let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
-  
   usuarios.push(usuarioObj);
   localStorage.setItem('usuarios', JSON.stringify(usuarios));
   return true;
 }
 
-// busca usuarios
 function buscarUsuarios() {
   return JSON.parse(localStorage.getItem('usuarios')) || [];
 }
@@ -41,8 +38,9 @@ function entrar() {
   const usuarioEncontrado = usuarios.find(usuario => usuario.usuario === usuarioInput && usuario.senha === senhaInput);
 
   if (usuarioEncontrado) {
+    localStorage.setItem('usuarioLogado', JSON.stringify(usuarioEncontrado)); // Salva o usuário logado
     alert("Login realizado com sucesso!");
-    window.location.href = "../index.html"; // Altere o nome conforme sua estrutura
+    window.location.href = "../perfil/perfil.html"; // Vai para a página de perfil
   } else {
     alert("Usuário ou senha incorretos.");
   }

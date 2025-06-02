@@ -3,17 +3,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (!usuario) {
     alert("Nenhum usuário logado encontrado.");
-    window.location.href = "../login/index.html";
+    window.location.href = "../login/index.html"; // volta para login
     return;
   }
 
-  // Exibir informações no perfil
+  // Preenche os dados no perfil
   document.getElementById('nome-usuario').innerText = usuario.usuario;
   document.getElementById('email-usuario').innerText = usuario.email;
-  document.getElementById('bio-usuario').innerText = "Sua bio aqui..."; // Você pode salvar uma bio futuramente
+  document.getElementById('bio-usuario').innerText = "Sua bio aqui..."; // pode adaptar futuramente
 
-  // Preencher os inputs com os mesmos dados
+  // Preenche os inputs do formulário
   document.getElementById('name').value = usuario.usuario;
   document.getElementById('email').value = usuario.email;
-  document.getElementById('bio').value = "Sua bio aqui..."; // Personalizável
+  document.getElementById('bio').value = "Sua bio aqui...";
 });

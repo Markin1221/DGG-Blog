@@ -18,7 +18,7 @@
   <div class="form-wrapper">
     
     <!-- LOGIN -->
-    <section class="form-container visivel" id="login-form">
+    <section class="form-container visivel" id="login-form-container">
       <h2>Login</h2>
       <h4>Bem vindo ao nosso site de conversação</h4>
       <form id="login-form" action="/login" method="post">
@@ -33,24 +33,24 @@
     </section>
     
     <!-- CADASTRO -->
-<section class="form-container oculto" id="cadastro-form">
-  <h2>Cadastro</h2>
-  <form id="cadastro-form" action="/cadastro" method="post">
-    <p>Nome do usuário</p>
-    <input type="text" name="usuario" placeholder="Digite seu nome" required />
-    <p>Sua senha</p>
-    <input type="password" name="senha" placeholder="Digite sua senha" required />
-    <p>Seu CPF</p>
-    <input type="text" name="cpf" placeholder="Digite seu CPF" required />
-    <p>Digite seu Email</p>
-    <input type="email" name="email" placeholder="Digite seu Email" required />
-    <p>Data de nascimento</p>
-    <input type="date" name="dataNascimento" required />
-    <button type="submit">Cadastrar</button>
-    <h3>Já possui uma conta?</h3>
-    <button type="button" class="switch-btn" onclick="mostrarLogin()">Login</button>
-  </form>
-</section>
+    <section class="form-container oculto" id="cadastro-form">
+      <h2>Cadastro</h2>
+      <form id="cadastro-form" action="/cadastro" method="post">
+        <p>Nome do usuário</p>
+        <input type="text" name="usuario" placeholder="Digite seu nome" required />
+        <p>Sua senha</p>
+        <input type="password" name="senha" placeholder="Digite sua senha" required />
+        <p>Seu CPF</p>
+        <input type="text" name="cpf" placeholder="Digite seu CPF" required />
+        <p>Digite seu Email</p>
+        <input type="email" name="email" placeholder="Digite seu Email" required />
+        <p>Data de nascimento</p>
+        <input type="date" name="dataNascimento" required />
+        <button type="submit">Cadastrar</button>
+        <h3>Já possui uma conta?</h3>
+        <button type="button" class="switch-btn" onclick="mostrarLogin()">Login</button>
+      </form>
+    </section>
   </div>
 </div>
 

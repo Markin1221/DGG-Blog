@@ -24,20 +24,19 @@
           <img src="../imagens/usuario.jpg" alt="Foto de perfil" />
         </div>
         <div class="profile-info">
-          <h2>Marcos Palmera</h2>
-          <h4>negodasilva@gmail.com</h4>
-          <p>Chupador de pintos alheios procurado nos 7 mares.</p>
+          <h2 id="nome-usuario">Nome do usuário</h2>
+          <h4 id="email-usuario">email@exemplo.com</h4>
+          <p id="bio-usuario">Bio padrão...</p>
 
-          <!-- Formulário de edição rápida -->
           <form class="profile-form">
             <label for="name">Nome completo</label>
-            <input type="text" id="name" value="Marcos Palmeira" />
+            <input type="text" id="name" />
 
             <label for="email">E-mail</label>
-            <input type="email" id="email" value="negodasilva@gmail.com" />
+            <input type="email" id="email" />
 
-            <label for="bio">Bio</label>.
-            <textarea id="bio" rows="4">Chupador de ointos alheios procurado nos 7 mares.</textarea>
+            <label for="bio">Bio</label>
+            <textarea id="bio" rows="4"></textarea>
 
             <button type="submit">Salvar Alterações</button>
           </form>
@@ -47,5 +46,8 @@
       </div>
     </div>
   </main>
+
+  <!-- Script para preencher os dados -->
+  <script src="script.js"></script>
 </body>
 </html>
