@@ -243,3 +243,15 @@ H3 {
     transform: translateX(-30px);
   }
 }
+.mensagem-erro {
+  color: red;
+  background-color: #ffe6e6;
+  border: 1px solid red;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+.oculto {
+  display: none;
+}
