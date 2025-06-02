@@ -39,6 +39,7 @@ function carregarUsuarios() {
       <div><strong>Nome:</strong> ${user.usuario}</div>
       <div><strong>Email:</strong> ${user.email}</div>
       <div><strong>Bio:</strong> ${user.bio || ''}</div>
+      <div><strong>CPF:</strong> ${user.cpf || 'Não informado'}</div>
       <div><strong>Senha:</strong> ${user.senha ? '••••••••' : 'Não definida'}</div>
       <div class="buttons">
         <button onclick="editarUsuario(${index})">Editar</button>
@@ -63,8 +64,9 @@ function editarUsuario(index) {
   const novoNome = prompt("Editar nome:", user.usuario);
   const novoEmail = prompt("Editar email:", user.email);
   const novaBio = prompt("Editar bio:", user.bio || '');
-  const novoCPF = prompt("Editar CPF:", user.cpf || '');
   const novaSenha = prompt("Editar senha:", user.senha || '');
+
+    const novoCPF = user.cpf;
 
   if (novoNome && novoEmail) {
     usuarios[index].usuario = novoNome;
