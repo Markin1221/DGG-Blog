@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CRUD de Registros</title>
+  <link rel="stylesheet" href="sttyle.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="form-section">
+      <h1>Adicionar Novo Registro</h1>
+    <form id="recordForm">
+         <input type="text" id="nome" placeholder="Nome completo" required />
+         <input type="email" id="email" placeholder="E-mail" required />
+         <textarea id="bio" placeholder="Bio"></textarea>
+         <button type="submit">Salvar Registro</button>
+    </form>
+    </div>
+
+    <div class="list-section">
+      <h1>Lista de Registros</h1>
+      <ul id="recordList">
+        <!-- Exemplo visual com botões Editar e Remover -->
+        <li>
+          <div><strong>Nome:</strong> João da Silva</div>
+          <div><strong>Email:</strong> joao@email.com</div>
+          <div><strong>Bio:</strong> Desenvolvedor web apaixonado por tecnologia.</div>
+          <div class="buttons">
+            <button class="edit-btn">Editar</button>
+            <button class="delete-btn">Remover</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="crud.js"></script>
+</body>
+</html>
+
+
+
