@@ -39,7 +39,6 @@ function carregarUsuarios() {
       <div><strong>Nome:</strong> ${user.usuario}</div>
       <div><strong>Email:</strong> ${user.email}</div>
       <div><strong>Bio:</strong> ${user.bio || ''}</div>
-      <div><strong>CPF:</strong> ${user.cpf || 'Não informado'}</div>
       <div><strong>Senha:</strong> ${user.senha ? '••••••••' : 'Não definida'}</div>
       <div class="buttons">
         <button onclick="editarUsuario(${index})">Editar</button>
