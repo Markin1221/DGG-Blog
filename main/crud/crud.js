@@ -46,10 +46,11 @@ function entrar() {
   if (usuarioEncontrado) {
     localStorage.setItem('usuarioLogado', JSON.stringify(usuarioEncontrado));
     alert("Login realizado com sucesso!");
-    usuarioentrou = true
-    nomeusuario = usuarioInput
-    logado()
     window.location.href = "../index.html";
+    usuarioentrou = true;
+    nomeusuario = usuarioInput;
+    logado();
+    
   } else {
     alert("Usuário ou senha incorretos.");
     usuarioentrou = false 
@@ -122,6 +123,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 function logado(){
+  console.log("Usuário logado: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", nomeusuario);
   let logado = document.getElementById('logado')
   logado.innerHTML = `<li id="logado"><a href="login/index.html"><i class="fa-solid fa-user"></i>${nomeusuario}</a></li>`
 
