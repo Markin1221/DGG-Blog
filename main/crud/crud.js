@@ -68,6 +68,14 @@ function cadastrar() {
     return;
   }
 
+  // Validação do CPF: só números e exatamente 11 dígitos
+  const cpfNumeros = cpf.replace(/\D/g, '');
+  if (cpfNumeros.length !== 11) {
+    mensagemErro.textContent = "CPF inválido. Deve conter exatamente 11 dígitos numéricos.";
+    mensagemErro.classList.remove('oculto');
+    return;
+  }
+
   const usuarios = buscarUsuarios();
   const existeEmailOuCpf = usuarios.find(u => u.email === email || u.cpf === cpf);
 
@@ -106,3 +114,4 @@ document.addEventListener('DOMContentLoaded', function () {
     entrar();
   });
 });
+
