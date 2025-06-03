@@ -1,5 +1,6 @@
-let usuarioentrou = false
-let nomeusuario = ""
+let usuarioentrou = false;
+let nomeusuario = "";
+
 function mostrarCadastro() {
   document.getElementById('login-form').classList.remove('visivel');
   document.getElementById('login-form').classList.add('oculto');
@@ -32,29 +33,29 @@ function buscarUsuarios() {
 }
 
 function entrar() {
-  const usuarioInput = document.querySelector('#login-form input[name="usuario"]').value.trim();
+  const emailInput = document.querySelector('#login-form input[name="email"]').value.trim();
   const senhaInput = document.querySelector('#login-form input[name="senha"]').value;
 
-  if (!usuarioInput || !senhaInput) {
+  if (!emailInput || !senhaInput) {
     alert("Por favor, preencha todos os campos.");
     return;
   }
 
   const usuarios = buscarUsuarios();
-  const usuarioEncontrado = usuarios.find(usuario => usuario.usuario === usuarioInput && usuario.senha === senhaInput);
+  const usuarioEncontrado = usuarios.find(usuario => usuario.email === emailInput && usuario.senha === senhaInput);
 
   if (usuarioEncontrado) {
     localStorage.setItem('usuarioLogado', JSON.stringify(usuarioEncontrado));
     alert("Login realizado com sucesso!");
     window.location.href = "../index.html";
     usuarioentrou = true;
-    nomeusuario = usuarioInput;
+    nomeusuario = usuarioEncontrado.usuario;
     logado();
-    
+
   } else {
-    alert("Usuário ou senha incorretos.");
-    usuarioentrou = false 
-    nomeusuario = ""
+    alert("Email ou senha incorretos.");
+    usuarioentrou = false;
+    nomeusuario = "";
   }
 }
 
@@ -76,7 +77,6 @@ function cadastrar() {
     return;
   }
 
-  // Validação do CPF: só números e exatamente 11 dígitos
   const cpfNumeros = cpf.replace(/\D/g, '');
   if (cpfNumeros.length !== 11) {
     mensagemErro.textContent = "CPF inválido. Deve conter exatamente 11 dígitos numéricos.";
@@ -122,9 +122,9 @@ document.addEventListener('DOMContentLoaded', function () {
     entrar();
   });
 });
-function logado(){
-  console.log("Usuário logado: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", nomeusuario);
-  let logado = document.getElementById('logado')
-  logado.innerHTML = `<li id="logado"><a href="login/index.html"><i class="fa-solid fa-user"></i>${nomeusuario}</a></li>`
 
+function logado() {
+  console.log("Usuário logado:", nomeusuario);
+  let logado = document.getElementById('logado');
+  logado.innerHTML = `<li id="logado"><a href="login/index.html"><i class="fa-solid fa-user"></i>${nomeusuario}</a></li>`;
 }

@@ -22,13 +22,17 @@
       
       <form id="login-form" action="/login" method="post">
         <h2>Login</h2>
-      <h4>Bem vindo ao nosso site de conversação</h4>
-        <p>Nome do usuário</p>
-        <input type="text" name="usuario" placeholder="Digite seu nome" required />
+        <h4>Bem-vindo ao nosso site de conversação</h4>
+        
+        <p>Email</p>
+        <input type="email" name="email" placeholder="Digite seu email" required />
+
         <p>Sua senha</p>
         <input type="password" name="senha" placeholder="Digite sua senha" required />
+
         <button type="button" onclick="entrar()">Entrar</button>
-        <h3>Ainda Não Tem Uma Conta?</h3>
+
+        <h3>Ainda não tem uma conta?</h3>
         <button type="button" class="switch-btn" onclick="mostrarCadastro()">Cadastre-se</button>
       </form>
     </section>
@@ -38,17 +42,24 @@
       <h2>Cadastro</h2>
       <div id="mensagem-erro" class="mensagem-erro oculto"></div>
       <form id="cadastro-form" action="/cadastro" method="post">
+        
         <p>Nome do usuário</p>
         <input type="text" name="usuario" placeholder="Digite seu nome" required />
+
         <p>Sua senha</p>
         <input type="password" name="senha" placeholder="Digite sua senha" required />
+
         <p>Seu CPF</p>
         <input type="text" name="cpf" placeholder="Digite seu CPF" required />
+
         <p>Digite seu Email</p>
-        <input type="email" name="email" placeholder="Digite seu Email" required />
+        <input type="email" name="email" placeholder="Digite seu email" required />
+
         <p>Data de nascimento</p>
         <input type="date" name="dataNascimento" required />
+
         <button type="submit">Cadastrar</button>
+
         <h3>Já possui uma conta?</h3>
         <button type="button" class="switch-btn" onclick="mostrarLogin()">Login</button>
       </form>
