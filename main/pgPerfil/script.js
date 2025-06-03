@@ -1,22 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const usuario = JSON.parse(localStorage.getItem('usuarioLogado'));
 
-  if (!usuario) {
-    alert("Nenhum usuário logado encontrado.");
-    window.location.href = "../login/index.html"; // volta para login
-    return;
-  }
-
-  // Preenche os dados no perfil
-  document.getElementById('nome-usuario').innerText = usuario.usuario;
-  document.getElementById('email-usuario').innerText = usuario.email;
-  document.getElementById('bio-usuario').innerText = "Sua bio aqui..."; // pode adaptar futuramente
-
-  // Preenche os inputs do formulário
-  document.getElementById('name').value = usuario.usuario;
-  document.getElementById('email').value = usuario.email;
-  document.getElementById('bio').value = "Sua bio aqui...";
-});
 document.addEventListener('DOMContentLoaded', () => {
   const usuarioLogado = JSON.parse(localStorage.getItem('usuarioLogado'));
 
@@ -26,14 +8,14 @@ document.addEventListener('DOMContentLoaded', () => {
     return;
   }
 
-  // Preenche os campos do formulário
+  // Preenche os campos do formulário com os dados do usuário logado
   document.getElementById('name').value = usuarioLogado.usuario || '';
   document.getElementById('email').value = usuarioLogado.email || '';
   document.getElementById('cpf').value = usuarioLogado.cpf || '';
   document.getElementById('senha').value = usuarioLogado.senha || '';
   document.getElementById('bio').value = usuarioLogado.bio || '';
 
-  // Lida com envio do formulário
+  // Evento de envio do formulário
   const form = document.querySelector('.profile-form');
   form.addEventListener('submit', function (e) {
     e.preventDefault();
@@ -63,6 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
         bio: novaBio,
       };
 
+      // Atualiza os dados no localStorage
       localStorage.setItem('usuarios', JSON.stringify(usuarios));
       localStorage.setItem('usuarioLogado', JSON.stringify(usuarios[indexUsuario]));
 
