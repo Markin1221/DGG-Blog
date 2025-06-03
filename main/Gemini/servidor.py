@@ -2,7 +2,7 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS
 from google import genai
 
-client = genai.Client(api_key="AIzaSyA89C0Py5BYiF5ns3wEYN4hqVtf8FUYeWM")
+client = genai.Client(api_key="AIzaSyCTheKHmzF0fXYPDYQZkF7pnw4yC1gG7mY")
 
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}}, methods=["GET", "POST", "OPTIONS"])
@@ -33,19 +33,19 @@ def gerar_comentarios():
     try:
         FanComent = client.models.generate_content(
             model="gemini-2.0-flash",
-            contents=f"{post} responda esse post como se fosse um fã número um em 100 palavras "
+            contents=f"{post} responda esse post como se fosse um fã número um em 50 palavras "
         )
         haterComent = client.models.generate_content(
             model="gemini-2.0-flash",
-            contents=f"{post} responda esse post como se fosse um hater em 100 palavras"
+            contents=f"{post} responda esse post como se fosse um hater em 50 palavras"
         )
         amorComent = client.models.generate_content(
             model="gemini-2.0-flash",
-            contents=f"{post} responda esse post como se fosse uma pessoa apaixonada no cara do post em 100 palavras"
+            contents=f"{post} responda esse post como se fosse uma pessoa apaixonada no cara do post em 50 palavras"
         )
         filosofoComent = client.models.generate_content(
             model="gemini-2.0-flash",
-            contents=f"{post} responda esse post como se fosse um filósofo, falando sobre o conteudo do texto e depois diga qual filosofo você é como uma sitaçao, em 100 palavras"
+            contents=f"{post} responda esse post como se fosse um filósofo, falando sobre o conteudo do texto e depois diga qual filosofo você é como uma sitaçao, em 50 palavras"
         )
 
         # Armazenar os comentários em variáveis globais
