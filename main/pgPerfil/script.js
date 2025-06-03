@@ -17,54 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('email').value = usuario.email;
   document.getElementById('bio').value = "Sua bio aqui...";
 });
-document.addEventListener('DOMContentLoaded', function () {
-  const usuarioLogado = JSON.parse(localStorage.getItem('usuarioLogado'));
-
-  if (usuarioLogado) {
-    document.getElementById('nome-usuario').textContent = usuarioLogado.usuario;
-    document.getElementById('email-usuario').textContent = usuarioLogado.email;
-    document.getElementById('bio-usuario').textContent = usuarioLogado.bio || 'Sem bio';
-    document.getElementById('cpf-usuario').textContent = usuarioLogado.cpf || '---';
-    document.getElementById('senha-usuario').textContent = usuarioLogado.senha ? '••••••••' : '---';
-
-    document.getElementById('name').value = usuarioLogado.usuario;
-    document.getElementById('email').value = usuarioLogado.email;
-    document.getElementById('bio').value = usuarioLogado.bio || '';
-    document.getElementById('senha').value = usuarioLogado.senha || '';
-  }
-
-  const form = document.querySelector('.profile-form');
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-
-    const novoNome = document.getElementById('name').value;
-    const novoEmail = document.getElementById('email').value;
-    const novaBio = document.getElementById('bio').value;
-    const novaSenha = document.getElementById('senha').value;
-
-    let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
-
-    const indexUsuario = usuarios.findIndex(u => u.email === usuarioLogado.email);
-
-    if (indexUsuario !== -1) {
-      usuarios[indexUsuario].usuario = novoNome;
-      usuarios[indexUsuario].email = novoEmail;
-      usuarios[indexUsuario].bio = novaBio;
-      usuarios[indexUsuario].senha = novaSenha;
-
-      // Atualiza localStorage
-      localStorage.setItem('usuarios', JSON.stringify(usuarios));
-
-      // Atualiza usuário logado
-      const usuarioAtualizado = { ...usuarios[indexUsuario] };
-      localStorage.setItem('usuarioLogado', JSON.stringify(usuarioAtualizado));
-
-      alert("Perfil atualizado com sucesso!");
-      location.reload();
-    }
-  });
-});
-ocument.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
   const usuarioLogado = JSON.parse(localStorage.getItem('usuarioLogado'));
 
   if (!usuarioLogado) {
@@ -73,18 +26,12 @@ ocument.addEventListener('DOMContentLoaded', () => {
     return;
   }
 
-  // Preenche os dados exibidos no perfil (caso use em texto também)
-  document.getElementById('nome-usuario').textContent = usuarioLogado.usuario;
-  document.getElementById('email-usuario').textContent = usuarioLogado.email;
-  document.getElementById('bio-usuario').textContent = usuarioLogado.bio || 'Sem bio';
-
-  // Preenche os campos do formulário em modo de visualização
+  // Preenche os campos do formulário
   document.getElementById('name').value = usuarioLogado.usuario || '';
   document.getElementById('email').value = usuarioLogado.email || '';
   document.getElementById('cpf').value = usuarioLogado.cpf || '';
   document.getElementById('senha').value = usuarioLogado.senha || '';
   document.getElementById('bio').value = usuarioLogado.bio || '';
-});
 
   // Lida com envio do formulário
   const form = document.querySelector('.profile-form');
@@ -125,4 +72,4 @@ ocument.addEventListener('DOMContentLoaded', () => {
       alert("Usuário não encontrado.");
     }
   });
-
+});
