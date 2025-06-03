@@ -33,13 +33,16 @@
         <button type="submit">Salvar Registro</button>
       </form>
     </div>
-
+    
+<input type="text" id="buscaNome" placeholder="Buscar por nome..." oninput="filtrarPorNome()"/>
+  
     <div class="list-section">
       <h1>Lista de Registros</h1>
       <ul id="recordList"></ul>
     </div>
   </div>
 
+  
   <!-- Modal de Edição -->
   <div id="modal" class="modal hidden">
     <div class="modal-content">
@@ -58,5 +61,6 @@
   </div>
 
   <script src="script.js"></script>
+  <script src="../scripts/filtroBusca.js"></script>
 </body>
 </html>
