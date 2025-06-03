@@ -1,24 +1,27 @@
+let editIndex = null;
+
 document.addEventListener('DOMContentLoaded', () => {
   carregarUsuarios();
 
-  document.getElementById('recordForm').addEventListener('submit', function(e) {
+  document.getElementById('recordForm').addEventListener('submit', function (e) {
     e.preventDefault();
 
     const nome = document.getElementById('nome').value;
     const email = document.getElementById('email').value;
-    const bio = document.getElementById('bio').value;
     const cpf = document.getElementById('cpf').value;
     const senha = document.getElementById('senha').value;
+    const dataNascimento = document.getElementById('dataNascimento').value;
+    const bio = document.getElementById('bio').value;
 
     const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
 
     usuarios.push({
       usuario: nome,
-      email: email,
-      bio: bio || '',
-      senha: senha || '',
-      cpf: cpf || '',
-      dataNascimento: ''
+      email,
+      cpf,
+      senha,
+      dataNascimento,
+      bio
     });
 
     localStorage.setItem('usuarios', JSON.stringify(usuarios));
@@ -38,9 +41,10 @@ function carregarUsuarios() {
     li.innerHTML = `
       <div><strong>Nome:</strong> ${user.usuario}</div>
       <div><strong>Email:</strong> ${user.email}</div>
-      <div><strong>Bio:</strong> ${user.bio || ''}</div>
-      <div><strong>CPF:</strong> ${user.cpf || 'Não informado'}</div>
+      <div><strong>CPF:</strong> ${user.cpf}</div>
+      <div><strong>Data de Nascimento:</strong> ${user.dataNascimento}</div>
       <div><strong>Senha:</strong> ${user.senha ? '••••••••' : 'Não definida'}</div>
+      <div><strong>Bio:</strong> ${user.bio || ''}</div>
       <div class="buttons">
         <button onclick="editarUsuario(${index})">Editar</button>
         <button onclick="removerUsuario(${index})">Remover</button>
@@ -61,20 +65,36 @@ function editarUsuario(index) {
   const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
   const user = usuarios[index];
 
-  const novoNome = prompt("Editar nome:", user.usuario);
-  const novoEmail = prompt("Editar email:", user.email);
-  const novaBio = prompt("Editar bio:", user.bio || '');
-  const novaSenha = prompt("Editar senha:", user.senha || '');
+  document.getElementById('edit-nome').value = user.usuario;
+  document.getElementById('edit-email').value = user.email;
+  document.getElementById('edit-cpf').value = user.cpf;
+  document.getElementById('edit-senha').value = user.senha;
+  document.getElementById('edit-dataNascimento').value = user.dataNascimento;
+  document.getElementById('edit-bio').value = user.bio;
 
-    const novoCPF = user.cpf;
+  editIndex = index;
 
-  if (novoNome && novoEmail) {
-    usuarios[index].usuario = novoNome;
-    usuarios[index].email = novoEmail;
-    usuarios[index].bio = novaBio;
-    usuarios[index].cpf = novoCPF;
-    usuarios[index].senha = novaSenha;
-    localStorage.setItem('usuarios', JSON.stringify(usuarios));
-    carregarUsuarios();
-  }
+  document.getElementById('modal').classList.remove('hidden');
+}
+
+function salvarEdicao() {
+  const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+
+  usuarios[editIndex] = {
+    usuario: document.getElementById('edit-nome').value,
+    email: document.getElementById('edit-email').value,
+    cpf: document.getElementById('edit-cpf').value,
+    senha: document.getElementById('edit-senha').value,
+    dataNascimento: document.getElementById('edit-dataNascimento').value,
+    bio: document.getElementById('edit-bio').value
+  };
+
+  localStorage.setItem('usuarios', JSON.stringify(usuarios));
+  fecharModal();
+  carregarUsuarios();
+}
+
+function fecharModal() {
+  document.getElementById('modal').classList.add('hidden');
+  editIndex = null;
 }
